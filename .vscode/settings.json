@@ -2,10 +2,6 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "[prisma]": {
-      "editor.defaultFormatter": "Prisma.prisma"
-    },
     "editor.formatOnSave": false,
     "editor.rulers": [200],
     "editor.tabSize": 2,

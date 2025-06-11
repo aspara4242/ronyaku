@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getBlogs } from "@/../libs/client";
+import { getNewsList } from "@libs/news";
 
 export default async function StaticPage() {
-    const { contents }  = await getBlogs();
+    const { contents }  = await getNewsList();
   
     if (!contents) {
       return <h1>No Contents</h1>;

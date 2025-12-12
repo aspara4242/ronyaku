@@ -1,5 +1,4 @@
 import { getNewsDetail } from "@libs/news";
-import Link from "next/link"
 import dayjs from 'dayjs';
 
 export default async function StaticDetailPage({

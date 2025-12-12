@@ -1,4 +1,4 @@
-import { client } from './common';
+import { client } from './client';
 
 export type Page = {
     id: string;

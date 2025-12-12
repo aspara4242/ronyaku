@@ -31,5 +31,5 @@ export async function getNewsDetail(slug: string): Promise<News> {
         }
     });
     console.log(slug)
-    return data.contents[0] || {};
+    return data.contents[0];
 }

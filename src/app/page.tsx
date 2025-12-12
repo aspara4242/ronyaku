@@ -19,12 +19,12 @@ export default async function Home() {
           <img id="twitter" src="/x_icon.svg" width="30" alt="X" />
         </a>
 
-        <a href="https://twitter.com/ronyaku4444" target="_blank" rel="noopener noreferrer">
-          <img id="twitter" src="/instagram_icon.svg" width="30" alt="Instagram" />
+        <a href="https://www.instagram.com/ronyaku44/" target="_blank" rel="noopener noreferrer">
+          <img id="instagram" src="/instagram_icon.svg" width="30" alt="Instagram" />
         </a>
 
-        <a href="https://twitter.com/ronyaku4444" target="_blank" rel="noopener noreferrer">
-          <img id="twitter" src="/youtube_icon.svg" width="30" alt="YouTube" />
+        <a href="https://www.youtube.com/@ronyaku4444" target="_blank" rel="noopener noreferrer">
+          <img id="youtube" src="/youtube_icon.svg" width="30" alt="YouTube" />
         </a>
       </div>
 
@@ -40,7 +40,11 @@ export default async function Home() {
           ))}
         </ul>
       </div>
-    <Footer></Footer>
+      
+      <p className="copyrights">
+        ©Ronyakunannyo Mirai Gakuen
+      </p>
     </div>
+    
   );
 };

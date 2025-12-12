@@ -23,6 +23,10 @@ export default function Footer() {
           <img id="twitter" src="/youtube_icon.svg" width="30" alt="YouTube" />
         </a>
       </div>
+
+      <p className="copyrights">
+        ©Ronyakunannyo Mirai Gakuen
+      </p>
     </div>
   )
 }

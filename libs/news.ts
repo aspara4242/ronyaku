@@ -11,10 +11,18 @@ export type News = {
 
 // microCMSからニュースの一覧を取得
 export async function getNewsList(): Promise<News[]> {
+    const now = new Date().toISOString();
+
+    // フィルタ文字列を構築
+    const filters =
+        `publication_date[less_than]${now}[and]` + // 公開開始が現在より前
+        `publication_end_date[greater_than]${now}`; // 公開終了が現在より後
+
     const data = await client.get({
         endpoint: 'news',
         queries: {
             fields: 'id,slug,title',
+            filters: filters,
             limit: 5,
         },
     });

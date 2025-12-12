@@ -12,9 +12,9 @@ export default async function StaticPage() {
       <>
         <div>
             <ul>
-                {contents.map((blog) => (
-                <li key={blog.id}>
-                    <Link href={`/blogs/${blog.id}`}>{blog.title}</Link>
+                {contents.map((news) => (
+                <li key={news.id}>
+                    <Link href={`/news/${news.slug}`}>{news.title}</Link>
                 </li>
                 ))}
             </ul>

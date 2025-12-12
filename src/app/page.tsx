@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getNewsList } from "@libs/news";
-import Footer from "@/components/Footer";
 
 export default async function Home() {
   const contents = await getNewsList();

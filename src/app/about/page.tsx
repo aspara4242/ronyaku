@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 export default async function StaticPage() {
   return (
     <div>
-      <div className="w-[90%] max-w-[720px] mx-auto pt-9 md:pt-16 pb-32">
+      <div className="w-[90%] max-w-[720px] mx-auto pt-9 md:pt-16 pb-36">
 
         <h1 className="font-bold text-xl mb-1">
           About Us
@@ -25,7 +25,7 @@ export default async function StaticPage() {
           団体概要
         </h2>
         <p className="text-sm md:text-base text-justify leading-relaxed md:text-base mb-9">
-          演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体。2017年、愛知県名古屋市にて旗揚げ。現在は名古屋東京の二拠点で活動を展開している。<br />
+          演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体。2017年、愛知県名古屋市にて旗揚げ。現在は名古屋・東京の二拠点で活動を展開している。<br />
           作家や俳優のみならず、メディアアーティストやプロダクトデザイナーなど、多様なメンバーが在籍。<br />
           日常にユーモアをねじ込むスタイルを広く人々に提案し実践してもらうことで、めちゃくちゃおもしろい世の中の実現をめざしている。<br />
           2024年、かながわパフォーミングアーツアワード2024にてオーディエンス賞を受賞。<br />

@@ -18,8 +18,7 @@ export default function Footer() {
       </Link>
 
       <div className='text-base text-center mb-6'>
-        <Link href="/about">About Us</Link> / <Link href="/works">Works</Link><br />
-        <Link href="/members">Members</Link> / <Link href="/contact">Contact Us</Link>
+        <Link href="/about">About Us</Link> / <Link href="/works">Works</Link> / <Link href="/members">Members</Link>
       </div>
 
       <div className='flex justify-center items-center gap-6 mb-6'>
@@ -52,6 +51,19 @@ export default function Footer() {
             height={30}
           />
         </a>
+      </div>
+
+      <div className="flex justify-center items-center gap-2 mb-12">
+        <Image
+          className="w-6"
+          src="/mail_icon.svg"
+          alt="メールアイコン"
+          width={30}
+          height={30}
+        />
+        <p className="text-sm">
+          ronyaku4444@gmail.com
+        </p>
       </div>
 
       <p className="text-sm text-center mb-4">

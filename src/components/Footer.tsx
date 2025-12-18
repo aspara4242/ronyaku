@@ -33,7 +33,7 @@ export default function Footer() {
           />
         </a>
 
-        <a href="https://twitter.com/ronyaku4444" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/ronyaku44/" target="_blank" rel="noopener noreferrer">
           <Image
             className="w-8"
             src="/instagram_icon.svg"
@@ -43,7 +43,7 @@ export default function Footer() {
           />
         </a>
 
-        <a href="https://twitter.com/ronyaku4444" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.youtube.com/@ronyaku4444" target="_blank" rel="noopener noreferrer">
           <Image
             className="w-9"
             src="/youtube_icon.svg"
@@ -54,7 +54,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <p className="text-sm text-center mb-6">
+      <p className="text-sm text-center mb-4">
         ©Ronyakunannyo Mirai Gakuen
       </p>
     </div>

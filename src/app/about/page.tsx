@@ -1,16 +1,19 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 
 export default async function StaticPage() {
   return (
     <div>
-      <div className="w-[90%] max-w-[720px] mx-auto pt-9 md:pt-16 pb-36">
+      <Navigation />
+
+      <div className="w-[90%] max-w-[720px] mx-auto pt-12 md:pt-28 pb-48">
 
         <h1 className="font-bold text-xl mb-1">
           About Us
         </h1>
         <p className="font-bold text-sm mb-12">
-          ——老若男女未来学園とは？
+          老若男女未来学園とは？
         </p>
 
         <Image
@@ -24,7 +27,7 @@ export default async function StaticPage() {
         <h2 className="font-bold text-base md:text-lg mb-2">
           団体概要
         </h2>
-        <p className="text-sm md:text-base text-justify leading-relaxed md:text-base mb-9">
+        <p className="text-sm md:text-base text-justify leading-relaxed md:text-base mb-12">
           演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体。2017年、愛知県名古屋市にて旗揚げ。現在は名古屋・東京の二拠点で活動を展開している。<br />
           作家や俳優のみならず、メディアアーティストやプロダクトデザイナーなど、多様なメンバーが在籍。<br />
           日常にユーモアをねじ込むスタイルを広く人々に提案し実践してもらうことで、めちゃくちゃおもしろい世の中の実現をめざしている。<br />

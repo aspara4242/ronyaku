@@ -7,25 +7,27 @@ export default function Footer() {
   return (
     <div>
 
-      <Link href="/">
-        <Image
-          className="h-9 mb-6 mx-auto"
-          src="/logo_white.svg"
-          alt="団体ロゴ"
-          width={720}
-          height={405}
-        />
-      </Link>
+      <div className="mb-6 md:hidden">
+        <Link href="/">
+          <Image
+            className="h-9 mb-6 mx-auto"
+            src="/logo_white.svg"
+            alt="団体ロゴ"
+            width={720}
+            height={405}
+          />
+        </Link>
 
-      <div className='text-base text-center mb-6'>
-        <Link href="/about">About Us</Link> / <Link href="/works">Works</Link> / <Link href="/members">Members</Link>
+        <div className='text-base text-center'>
+          <Link href="/about">About Us</Link> / <Link href="/works">Works</Link> / <Link href="/members">Members</Link> / <Link href="/news">News</Link>
+        </div>
       </div>
 
       <div className='flex justify-center items-center gap-6 mb-6'>
         <a href="https://twitter.com/ronyaku4444" target="_blank" rel="noopener noreferrer">
           <Image
-            className="w-8"
-            src="/x_icon.svg"
+            className="w-7"
+            src="/logo.svg"
             alt="Xアイコン画像"
             width={30}
             height={30}
@@ -66,8 +68,8 @@ export default function Footer() {
         </p>
       </div>
 
-      <p className="text-sm text-center mb-4">
-        ©Ronyakunannyo Mirai Gakuen
+      <p className="font-extralight text-sm text-center mb-6">
+        © 2025 Ronyakunannyo Mirai Gakuen
       </p>
     </div>
   )

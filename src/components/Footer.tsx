@@ -41,7 +41,7 @@ export default function Footer() {
             <Image className="w-9" src="/youtube_icon.svg" alt="YouTubeアイコン画像" width={30} height={30} />
           </a>
         </div>
-      </div>ß
+      </div>
 
       <div className="flex justify-center items-center gap-2 mb-12">
         <Image

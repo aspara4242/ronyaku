@@ -27,8 +27,8 @@ export default async function StaticPage() {
         <h2 className="font-bold text-base md:text-lg mb-2">
           団体概要
         </h2>
-        <p className="text-sm md:text-base text-justify leading-relaxed md:text-base mb-12">
-          演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体。2017年、愛知県名古屋市にて旗揚げ。現在は名古屋・東京の二拠点で活動を展開している。<br />
+        <p className="text-sm md:text-base text-justify leading-relaxed mb-12">
+          演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体。2017年、愛知県名古屋市にて旗揚げ。現在は名古屋と東京の二拠点で活動を展開している。<br />
           作家や俳優のみならず、メディアアーティストやプロダクトデザイナーなど、多様なメンバーが在籍。<br />
           日常にユーモアをねじ込むスタイルを広く人々に提案し実践してもらうことで、めちゃくちゃおもしろい世の中の実現をめざしている。<br />
           2024年、かながわパフォーミングアーツアワード2024にてオーディエンス賞を受賞。<br />
@@ -38,7 +38,7 @@ export default async function StaticPage() {
         <h2 className="font-bold text-base md:text-lg mb-2">
           活動理念
         </h2>
-        <p className="text-sm md:text-base text-justify leading-relaxed md:text-base">
+        <p className="text-sm md:text-base text-justify leading-relaxed">
           「老若男女」ありとあらゆる人びとの「未来」を明るく照らすことのできるような作品の創作を通して、多様なクリエイターが対等な立場で研鑽に励むことのできる「学園」のような場を追求していく。
         </p>
 

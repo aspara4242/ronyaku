@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getNewsList } from "@libs/news";
+import Spinner from "@/components/Spinner";
 
 export default async function Home() {
   const contents = await getNewsList();
@@ -8,12 +9,10 @@ export default async function Home() {
   return (
     <div className="relative w-[90%] max-w-[720px] mx-auto">
 
-      <div className="w-3/4 max-w-[360px] aspect-square flex justify-center items-center mx-auto mt-12">
-        <Image
+      <div className="flex justify-center mt-12 mb-12">
+        <Spinner
           src="/logo_main.png"
-          alt="老若男女未来学園ロゴ画像"
-          width={420}
-          height={236}
+          className="w-3/4 max-w-[360px]"
         />
       </div>
 

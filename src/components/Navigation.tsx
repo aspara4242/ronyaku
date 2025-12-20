@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Navigation() {
   return (
-    <div className="hidden fixed w-dvw md:flex justify-between items-center pt-6">
+    <div className="hidden fixed top-0 w-dvw md:flex justify-between items-center pt-6">
 
       <Link href="/" className='inline-block ml-6'>
         <Image

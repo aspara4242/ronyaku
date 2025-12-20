@@ -1,5 +1,5 @@
 // components/Contents.tsx
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 interface ContentsProps {
   children?: React.ReactNode;

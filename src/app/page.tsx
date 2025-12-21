@@ -3,7 +3,6 @@ import { getNewsList } from "@libs/news";
 import Spinner from "@/components/Spinner";
 import Copyright from "@/components/Copyright";
 import ContactLinks from "@/components/ContactLinks";
-import Navigation from "@/components/Navigation";
 
 export default async function Home() {
   const contents = await getNewsList();

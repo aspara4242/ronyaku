@@ -1,7 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getNewsList } from "@libs/news";
 import Spinner from "@/components/Spinner";
+import Copyright from "@/components/Copyright";
+import ContactLinks from "@/components/ContactLinks";
+import Navigation from "@/components/Navigation";
 
 export default async function Home() {
   const contents = await getNewsList();
@@ -9,14 +11,14 @@ export default async function Home() {
   return (
     <div className="relative w-[90%] max-w-[720px] mx-auto">
 
-      <div className="flex justify-center mt-12 mb-12">
+      <div className="flex justify-center mt-6 mb-6">
         <Spinner
           src="/logo_main.png"
           className="w-3/4 max-w-[360px]"
         />
       </div>
 
-      <div className="text-lg text-center leading-tight mb-12">
+      <div className="text-lg text-center leading-tight mb-16">
         <Link href="/about">About Us</Link><br />
         ・<br />
         <Link href="/works">Works</Link><br />
@@ -24,42 +26,29 @@ export default async function Home() {
         <Link href="/members">Members</Link>
       </div>
 
-      <div className='grid grid-cols-3 gap-6 items-center justify-center w-fit mx-auto mb-6'>
-        <div className="flex justify-start">
-          <a href="https://twitter.com/ronyaku4444" target="_blank" rel="noopener noreferrer">
-            <Image className="w-7" src="/x_icon.svg" alt="Xアイコン画像" width={30} height={30} />
-          </a>
-        </div>
-
-        <div className="flex justify-center">
-          <a href="https://www.instagram.com/ronyaku44" target="_blank" rel="noopener noreferrer">
-            <Image className="w-8" src="/instagram_icon.svg" alt="Instagramアイコン画像" width={30} height={30} />
-          </a>
-        </div>
-
-        <div className="flex justify-end">
-          <a href="https://www.youtube.com/@ronyaku4444" target="_blank" rel="noopener noreferrer">
-            <Image className="w-9" src="/youtube_icon.svg" alt="YouTubeアイコン画像" width={30} height={30} />
-          </a>
-        </div>
-      </div>
-
-      <div>
+      <div className="mb-20">
         <p className="text-lg text-center mb-4">
           <Link href="/news">News</Link>
         </p>
-        <ul className="mb-32">
+
+        <div className="w-full md:w-3/4 mx-auto text-sm md:text-base">
           {contents.map((news) => (
-            <li key={news.id}>
-              <Link href={`/news/${news.slug}`}>{news.title}</Link>
-            </li>
+            <div key={news.id} className="border rounded-md flex p-2 mb-3">
+              <p className="w-[3.5rem] md:w-[4rem] shrink-0 flex justify-center items-center mr-2">
+                {news.category}
+              </p>
+              <p className="w-auto text-justify pl-2 border-l">
+                <Link href={`/news/${news.slug}`}>{news.title}</Link>
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
-      <p className="absolute w-full font-extralight text-sm text-center pb-6">
-        ©Ronyakunannyo Mirai Gakuen
-      </p>
+      <ContactLinks />
+
+      <Copyright />
+
     </div>
 
   );

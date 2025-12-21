@@ -17,7 +17,7 @@ export default async function Home() {
         />
       </div>
 
-      <div className="text-lg text-center leading-tight mb-16">
+      <div className="text-lg text-center leading-tight mb-16 z-10">
         <Link href="/about">About Us</Link><br />
         ・<br />
         <Link href="/works">Works</Link><br />
@@ -26,13 +26,13 @@ export default async function Home() {
       </div>
 
       <div className="mb-20">
-        <p className="text-lg text-center mb-4">
+        <p className="text-lg text-center mb-3">
           <Link href="/news">News</Link>
         </p>
 
         <div className="w-full md:w-3/4 mx-auto text-sm md:text-base">
           {contents.map((news) => (
-            <div key={news.id} className="border rounded-md flex p-2 mb-3">
+            <div key={news.id} className="border rounded-md flex p-2 mb-2">
               <p className="w-[3.5rem] md:w-[4rem] shrink-0 flex justify-center items-center mr-2">
                 {news.category}
               </p>

@@ -21,6 +21,7 @@ export async function getNewsList(): Promise<News[]> {
         queries: {
             filters: filters,
             limit: 5,
+            orders: '-priority, -publication_date',
         },
     });
     return data.contents;

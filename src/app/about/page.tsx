@@ -4,6 +4,20 @@ import Navigation from "@/components/Navigation";
 import Title from "@/components/Title";
 import TextBlock from "@/components/TextBlock";
 import Contents from "@/components/Contents";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "老若男女未来学園の基本情報です。",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us",
+    description: "老若男女未来学園の基本情報です。",
+    url: `https://ronyaku.com/about`,
+  },
+};
 
 export default async function StaticPage() {
   return (
@@ -11,7 +25,7 @@ export default async function StaticPage() {
       <Navigation />
 
       <Contents>
-        
+
         <Title title="About Us" ja_title="老若男女未来学園とは？" />
 
         <Image

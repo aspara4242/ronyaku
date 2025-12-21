@@ -11,7 +11,7 @@ export default async function StaticPage() {
       <Navigation />
 
       <Contents>
-
+        
         <Title title="About Us" ja_title="老若男女未来学園とは？" />
 
         <Image

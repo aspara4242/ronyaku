@@ -29,7 +29,7 @@ export default function Spinner({ src, baseSpeed = 0.35, className = "" }: Props
   return (
     <div 
       className={`block aspect-square ${className} ${
-        isRotating ? "cursor-not-allowed" : "cursor-pointer"
+        isRotating ? "cursor-default" : "cursor-pointer"
       }`}
       style={{
         transform: `rotate(${rotation}deg)`,

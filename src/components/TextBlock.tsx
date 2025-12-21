@@ -8,7 +8,6 @@ interface TextBlockProps {
 }
 
 const TextBlock = ({ title, children, level = 'h2' }: TextBlockProps) => {
-
   const Tag = level;
 
   return (

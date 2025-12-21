@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Navigation() {
+const Navigation = () => {
   return (
     <div className="hidden fixed top-0 w-dvw md:flex justify-between items-center pt-6">
 
@@ -24,3 +24,5 @@ export default function Navigation() {
     </div>
   )
 }
+
+export default Navigation;

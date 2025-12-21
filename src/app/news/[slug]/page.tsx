@@ -8,7 +8,7 @@ export default async function StaticDetailPage({
 }) {
   const { slug } = await params;
   const news = await getNewsDetail(slug);
-  const formattedDate = dayjs(news.publishedAt).format('YYYY.MM.DD');
+  const formattedDate = dayjs(news.publication_date).format('YYYY.MM.DD');
 
   return(
     <>

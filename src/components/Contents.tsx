@@ -7,7 +7,7 @@ interface ContentsProps {
 
 const Contents = ({ children }: ContentsProps) => {
   return (
-    <div className="w-[90%] max-w-[720px] mx-auto mt-12 md:mt-28 mb-48">
+    <div className="w-[90%] max-w-[720px] mx-auto mt-12 md:mt-28 mb-36">
       {children}
     </div>
   );

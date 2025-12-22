@@ -10,14 +10,14 @@ export default async function Home() {
   return (
     <div className="relative w-[90%] max-w-[720px] mx-auto">
 
-      <div className="flex justify-center mt-6 mb-6">
+      <div className="flex justify-center mt-6 mb-6 z-1">
         <Spinner
           src="/logo_main.png"
           className="w-3/4 max-w-[360px]"
         />
       </div>
 
-      <div className="text-lg text-center leading-tight mb-16 z-10">
+      <div className="text-lg text-center leading-tight mb-24 z-10">
         <Link href="/about">About Us</Link><br />
         ・<br />
         <Link href="/works">Works</Link><br />
@@ -25,8 +25,8 @@ export default async function Home() {
         <Link href="/members">Members</Link>
       </div>
 
-      <div className="mb-20">
-        <p className="text-lg text-center mb-3">
+      <div className="mb-36">
+        <p className="text-lg text-center mb-2">
           <Link href="/news">News</Link>
         </p>
 

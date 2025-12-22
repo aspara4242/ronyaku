@@ -6,16 +6,20 @@ import TextBlock from "@/components/TextBlock";
 import Contents from "@/components/Contents";
 import { Metadata } from "next";
 
+const title = "About Us";
+const description = "老若男女未来学園の基本情報です。";
+const slug = "about";
+
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "老若男女未来学園の基本情報です。",
+  title: title,
+  description: description,
   alternates: {
-    canonical: "/about",
+    canonical: "/" + slug,
   },
   openGraph: {
-    title: "About Us",
-    description: "老若男女未来学園の基本情報です。",
-    url: `https://ronyaku.com/about`,
+    title: title,
+    description: description,
+    url: `https://ronyaku.com/${slug}`,
   },
 };
 

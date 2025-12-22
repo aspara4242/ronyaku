@@ -9,7 +9,7 @@ export type News = {
     category: string;
 }
 
-export async function getNewsList(): Promise<News[]> {
+export async function getNewsListForTop(): Promise<News[]> {
     const now = new Date().toISOString();
 
     const filters =
@@ -22,6 +22,17 @@ export async function getNewsList(): Promise<News[]> {
             filters: filters,
             limit: 5,
             orders: '-priority, -publication_date',
+        },
+    });
+    return data.contents;
+}
+
+export async function getNewsList(): Promise<News[]> {
+    const data = await client.get({
+        endpoint: 'news',
+        queries: {
+            limit: 50,
+            orders: '-publication_date',
         },
     });
     return data.contents;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface Props {
   src: string;
@@ -28,7 +29,7 @@ export default function Spinner({ src, baseSpeed = 0.35, className = "" }: Props
 
   return (
     <div 
-      className={`block aspect-square ${className} ${
+      className={`block aspect-square z-1 ${className} ${
         isRotating ? "cursor-default" : "cursor-pointer"
       }`}
       style={{
@@ -38,10 +39,13 @@ export default function Spinner({ src, baseSpeed = 0.35, className = "" }: Props
       onClick={handleRotate}
       onTransitionEnd={() => setIsRotating(false)}
     >
-      <img
+      <Image
         src={src}
-        alt="Spinner"
+        alt="老若男女未来学園ロゴ。クリックまたはタップすると回転する。"
         className="w-full h-full object-contain"
+        width={600}
+        height={600}
+        priority={true}
       />
     </div>
   );

@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { getNewsList } from "@libs/news";
+import { getNewsListForTop } from "@libs/news";
 import Spinner from "@/components/Spinner";
 import Copyright from "@/components/Copyright";
 import ContactLinks from "@/components/ContactLinks";
 
 export default async function Home() {
-  const contents = await getNewsList();
+  const contents = await getNewsListForTop();
 
   return (
     <div className="relative w-[90%] max-w-[720px] mx-auto">

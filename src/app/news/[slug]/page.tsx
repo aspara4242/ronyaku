@@ -41,13 +41,6 @@ export default async function StaticDetailPage({
           }}
           className="prose prose-sm news-content md:prose-base mb-6 border-2 px-4 py-6"
         />
-        <p className="w-full text-center text-sm underline md:text-base">
-          <Link
-            href="/news"
-          >
-            一覧に戻る
-          </Link>
-        </p>
       </Contents>
 
       <Footer />

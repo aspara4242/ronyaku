@@ -25,6 +25,10 @@ export default async function StaticPage() {
                   </p>
                   <p className="md:text-sm">
                     {new Date(news.publication_date).toLocaleDateString('ja-JP', {
+                      timeZone: 'Asia/Tokyo'
+                    }).replace(/\//g, '-')}
+                    {new Date(news.publication_date).toLocaleDateString('ja-JP', {
+                      timeZone: 'Asia/Tokyo',
                       year: 'numeric',
                       month: 'numeric',
                       day: 'numeric',

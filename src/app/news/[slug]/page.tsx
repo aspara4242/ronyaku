@@ -1,24 +1,24 @@
 import { getNewsDetail } from "@libs/news";
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
 export default async function StaticDetailPage({
-  params
+  params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const news = await getNewsDetail(slug);
-  const formattedDate = dayjs(news.publication_date).format('YYYY.MM.DD');
+  const formattedDate = dayjs(news.publication_date).format("YYYY.MM.DD");
 
-  return(
+  return (
     <>
-        <p>{news.title}</p>
-        <p>{formattedDate}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${news.body}`,
-          }}
-        />
+      <p>{news.title}</p>
+      <p>{formattedDate}</p>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `${news.body}`,
+        }}
+      />
     </>
-  )
+  );
 }

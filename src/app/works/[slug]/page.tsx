@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
 import Link from "next/link";
-import Title from "@/components/Title";
 
 export default async function StaticDetailPage({
   params,

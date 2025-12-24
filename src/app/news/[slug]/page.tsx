@@ -2,7 +2,6 @@ import { getNewsDetail } from "@libs/news";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
-import Link from "next/link";
 
 export default async function StaticDetailPage({
   params,

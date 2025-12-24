@@ -17,14 +17,14 @@ export default async function StaticDetailPage({
       <Navigation />
 
       <Contents>
-        <div className="mb-6 border-b text-center pb-4">
-        <h2 className="mb-1 text-center text-lg font-bold md:text-xl">
-          {works.title}
-        </h2>
-        <p className="text-center text-sm md:text-base">
-          {new Date(works.date).getFullYear()}
-          {works.subtitle && " / " + works.subtitle}
-        </p>
+        <div className="mb-6 border-b pb-4 text-center">
+          <h2 className="mb-1 text-center text-lg font-bold md:mb-2 md:text-xl">
+            {works.title}
+          </h2>
+          <p className="text-center text-sm md:text-base">
+            {new Date(works.date).getFullYear()}
+            {works.subtitle && " / " + works.subtitle}
+          </p>
         </div>
         <div
           dangerouslySetInnerHTML={{

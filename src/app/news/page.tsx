@@ -20,7 +20,7 @@ export default async function StaticPage() {
             <div key={news.id} className="mb-6 border-b">
               <Link href={`/news/${news.slug}`}>
                 <div className="mb-2 flex items-center">
-                  <p className="mr-2 flex w-[4rem] items-center justify-center border py-0.5 text-xs md:text-sm md:w-[5rem]">
+                  <p className="mr-2 flex w-[4rem] items-center justify-center border text-xs md:w-[5rem] md:text-sm">
                     {news.category}
                   </p>
                   <p className="text-sm md:text-base">

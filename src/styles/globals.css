@@ -2,19 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  color:#ffffff;
-  background-color:#0f0f0f;
+body {
+  color: #ffffff;
+  background-color: #0f0f0f;
 }
 
-.news-content {
+.news-content,
+.works-content {
   @apply max-w-none;
 }
 
-.news-content * {
-  color:#ffffff;
+.news-content *,
+.works-content * {
+  color: #ffffff;
 }
 
-.news-content p {
+.news-content p,
+.works-content p {
   @apply text-justify leading-relaxed;
+}
+
+.works-content h3 {
+  @apply mb-2 mt-8 text-base font-bold md:text-lg;
+}
+
+.news-content figure,
+.works-content figure {
+  @apply w-full max-w-[540px] mx-auto;
 }

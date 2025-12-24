@@ -15,27 +15,26 @@ export default async function StaticPage() {
       <Contents>
         <Title title="News" ja_title="老若男女未来学園からのお知らせ" />
 
-        <div className="w-full mx-auto">
+        <div className="mx-auto w-full">
           {contents.map((news) => (
-            <div key={news.id} className="text-sm md:text-base border-b mb-4">
+            <div key={news.id} className="mb-6 border-b">
               <Link href={`/news/${news.slug}`}>
-                <div className="flex items-center mb-1.5">
-                  <p className="text-xs md:text-sm w-[4rem] md:w-[5rem] border flex justify-center items-center py-0.5 mr-2">
+                <div className="mb-2 flex items-center">
+                  <p className="mr-2 flex w-[4rem] items-center justify-center border py-0.5 text-xs md:text-sm md:w-[5rem]">
                     {news.category}
                   </p>
-                  <p className="md:text-sm">
-                    {new Date(news.publication_date).toLocaleDateString('ja-JP', {
-                      timeZone: 'Asia/Tokyo'
-                    }).replace(/\//g, '-')}
-                    {new Date(news.publication_date).toLocaleDateString('ja-JP', {
-                      timeZone: 'Asia/Tokyo',
-                      year: 'numeric',
-                      month: 'numeric',
-                      day: 'numeric',
-                    }).replace(/\//g, '-')}
+                  <p className="text-sm md:text-base">
+                    {new Date(news.publication_date)
+                      .toLocaleDateString("ja-JP", {
+                        timeZone: "Asia/Tokyo",
+                        year: "numeric",
+                        month: "numeric",
+                        day: "numeric",
+                      })
+                      .replace(/\//g, "-")}
                   </p>
                 </div>
-                <p className="text-justify mb-2">
+                <p className="mb-2 text-justify text-sm md:text-base">
                   {news.title}
                 </p>
               </Link>
@@ -48,4 +47,3 @@ export default async function StaticPage() {
     </div>
   );
 }
-

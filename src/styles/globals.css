@@ -6,3 +6,15 @@ body{
   color:#ffffff;
   background-color:#0f0f0f;
 }
+
+.news-content {
+  @apply max-w-none;
+}
+
+.news-content * {
+  color:#ffffff;
+}
+
+.news-content p {
+  @apply text-justify leading-relaxed;
+}

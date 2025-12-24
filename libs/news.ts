@@ -28,9 +28,14 @@ export async function getNewsListForTop(): Promise<News[]> {
 }
 
 export async function getNewsList(): Promise<News[]> {
+  const now = new Date().toISOString();
+
+  const filters = `publication_date[less_than]${now}`;
+
   const data = await client.get({
     endpoint: "news",
     queries: {
+      filters: filters,
       limit: 50,
       orders: "-publication_date",
     },

@@ -11,7 +11,7 @@ const TextBlock = ({ title, children, level = 'h2' }: TextBlockProps) => {
   const Tag = level;
 
   return (
-    <div className="mb-12">
+    <div className="mb-8">
       <Tag className="font-bold text-base md:text-lg mb-2">
         {title}
       </Tag>

@@ -38,7 +38,7 @@ export default async function StaticDetailPage({
           dangerouslySetInnerHTML={{
             __html: `${news.body}`,
           }}
-          className="prose prose-sm news-content md:prose-base mb-6 border-2 px-4 py-6"
+          className="prose prose-sm news-content md:prose-base border-2 px-4 py-8"
         />
       </Contents>
 

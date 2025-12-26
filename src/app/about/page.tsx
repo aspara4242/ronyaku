@@ -32,7 +32,7 @@ export default async function StaticPage() {
         <Title title="About Us" ja_title="老若男女未来学園とは？" />
 
         <Image
-          className="mb-12 w-full"
+          className="mb-8 w-full"
           src="/about_image.jpg"
           alt="団体概要イメージ画像"
           width={720}

@@ -17,7 +17,7 @@ export default async function StaticPage() {
 
         <div className="mx-auto w-full">
           {contents.map((news) => (
-            <div key={news.id} className="mb-6 border-b">
+            <div key={news.id} className="mb-4 border-b">
               <Link href={`/news/${news.slug}`}>
                 <div className="mb-2 flex items-center">
                   <p className="mr-2 flex w-[4rem] items-center justify-center border text-xs md:w-[5rem] md:text-sm">

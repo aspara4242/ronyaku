@@ -17,8 +17,8 @@ export default async function StaticDetailPage({
       <Navigation />
 
       <Contents>
-        <div className="mb-6 border-b pb-4 text-center">
-          <h2 className="mb-1 text-center text-lg font-bold md:mb-2 md:text-xl">
+        <div className="mb-8 border-b pb-4 text-center">
+          <h2 className="mb-2 text-center text-lg font-bold md:mb-2 md:text-xl">
             {works.title}
           </h2>
           <p className="text-center text-sm md:text-base">
@@ -30,7 +30,7 @@ export default async function StaticDetailPage({
           dangerouslySetInnerHTML={{
             __html: `${works.body}`,
           }}
-          className="works-content prose prose-sm mb-16 md:prose-base"
+          className="works-content prose prose-sm mb-4 border-b pb-8 md:prose-base"
         />
         <p className="w-full text-center text-sm underline md:text-base">
           <Link href="/works">一覧に戻る</Link>

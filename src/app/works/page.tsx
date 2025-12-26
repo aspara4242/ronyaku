@@ -17,7 +17,7 @@ export default async function StaticPage() {
 
         <div className="w-full mx-auto">
           {contents.map((works) => (
-            <div key={works.id} className="border-b mb-3">
+            <div key={works.id} className="border-b mb-4">
               <Link href={`/works/${works.slug}`}>
                 <p className="text-base text-justify">
                   {works.title}

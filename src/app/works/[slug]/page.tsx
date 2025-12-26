@@ -30,7 +30,7 @@ export default async function StaticDetailPage({
           dangerouslySetInnerHTML={{
             __html: `${works.body}`,
           }}
-          className="works-content prose prose-sm mb-4 border-b pb-8 md:prose-base"
+          className="works-content prose prose-sm mb-8 border-b pb-8 md:prose-base"
         />
         <p className="w-full text-center text-sm underline md:text-base">
           <Link href="/works">一覧に戻る</Link>

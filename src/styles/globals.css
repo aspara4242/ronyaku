@@ -10,90 +10,69 @@ body {
 .news-content,
 .works-content {
   @apply max-w-none;
+  * {
+    color: #ffffff;
+  }
+  > *:first-child {
+    @apply mt-0;
+  }
+  > *:last-child {
+    @apply mb-0;
+  }
+  p {
+    @apply mb-8 text-justify leading-relaxed;
+  }
+  h3 {
+    @apply mb-2 text-base font-bold md:text-lg;
+  }
+  h4 {
+    @apply mb-2 text-sm font-bold md:text-base;
+  }
+  figure {
+    @apply mx-auto mb-8 w-full max-w-[540px];
+  }
+  p:has(span.caption) {
+    @apply mx-auto -mt-6 w-full max-w-[540px] opacity-75;
+  }
+  hr {
+    @apply my-8;
+  }
+  ul,
+  ol {
+    @apply mb-8 list-outside pl-0 ps-4;
+  }
+  ul li,
+  ol li {
+    @apply mb-8 ps-0;
+  }
+  *::marker {
+    @apply font-bold;
+    color: #ffffff;
+  }
+  ul li p,
+  ol li p {
+    @apply mb-4 mt-2;
+  }
+  div:has(iframe) {
+    @apply mb-8;
+  }
 }
 
-.news-content *,
-.works-content * {
-  color: #ffffff;
-}
-
-.news-content p,
-.works-content p {
-  @apply mb-8 text-justify leading-relaxed;
-}
-
-.news-content h3,
-.works-content h3 {
-  @apply mb-2 text-base font-bold md:text-lg;
-}
-
-.news-content h4,
-.works-content h4 {
-  @apply mb-2 text-sm font-bold md:text-base;
-}
-
-.news-content figure,
-.works-content figure {
-  @apply mx-auto mb-8 w-full max-w-[540px];
-}
-
-.news-content hr,
-.works-content hr {
-  @apply my-8;
-}
-
-.news-content ul,
-.news-content ol,
-.works-content ul,
-.works-content ol {
-  @apply mb-8 list-outside pl-0 ps-4;
-}
-
-.news-content ul li,
-.news-content ol li,
-.works-content ul li,
-.works-content ol li {
-  @apply mb-8 ps-0;
-}
-
-.news-content *::marker,
-.works-content *::marker {
-  @apply font-bold;
-  color: #ffffff;
-}
-
-.news-content ul li p,
-.news-content ol li p,
-.works-content ul li p,
-.works-content ol li p {
-  @apply mb-4 mt-2;
-}
-
-.news-content > *:first-child {
-  @apply mt-0;
-}
-
-.news-content > *:last-child {
-  @apply mb-0;
-}
-
-.works-content h3:before {
-  content: "- ";
-}
-
-.works-content blockquote {
-  @apply mb-8 border p-4 font-normal not-italic;
-}
-
-.works-content blockquote h3:before,
-.works-content blockquote p:before {
-  content: none;
-}
-
-.works-content blockquote > *:first-child {
-  @apply mt-0;
-}
-
-.works-content blockquote > *:last-child {
-  @apply mb-0;
+.works-content {
+  h3:before {
+    content: "- ";
+  }
+  blockquote {
+    @apply mb-8 border p-4 font-normal not-italic;
+    h3:before,
+    p:before {
+      content: none;
+    }
+    > *:first-child {
+      @apply mt-0;
+    }
+    > *:last-child {
+      @apply mb-0;
+    }
+  }
 }

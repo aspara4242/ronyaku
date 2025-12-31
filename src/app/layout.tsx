@@ -1,14 +1,16 @@
 import "@/styles/globals.css";
-import { Metadata } from "next";  
+import { Metadata } from "next";
 import { type FC } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ronyaku.com'),
+  metadataBase: new URL("https://ronyaku.com"),
   title: {
     default: "老若男女未来学園",
     template: `%s | 老若男女未来学園`,
   },
-  description: "演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体、老若男女未来学園のウェブサイトです。",
+  description:
+    "演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体、老若男女未来学園のウェブサイトです。",
   alternates: {
     canonical: "/",
   },
@@ -17,7 +19,8 @@ export const metadata: Metadata = {
       default: "老若男女未来学園",
       template: `%s | 老若男女未来学園`,
     },
-    description: "演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体、老若男女未来学園のウェブサイトです。",
+    description:
+      "演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体、老若男女未来学園のウェブサイトです。",
     url: `https://ronyaku.com`,
     siteName: "老若男女未来学園",
     locale: "ja_JP",
@@ -37,7 +40,10 @@ type RootLayoutProps = {
 const RootLayout: FC<RootLayoutProps> = (props) => {
   return (
     <html lang="ja">
-      <body className="">{props.children}</body>
+      <body className="">
+        {props.children}
+        <Analytics />
+      </body>
     </html>
   );
 };

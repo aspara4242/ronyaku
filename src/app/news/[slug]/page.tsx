@@ -3,6 +3,33 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const news = await getNewsDetail(slug);
+
+  const title = "News";
+  const description = "老若男女未来学園からのお知らせです。" + news.title;
+
+  const metadata = {
+    title: title,
+    description: description,
+    alternates: {
+      canonical: "/news/" + slug,
+    },
+    openGraph: {
+      title: title,
+      description: description,
+      url: `https://ronyaku.com/news/${slug}`,
+    },
+  };
+
+  return metadata;
+}
+
 export default async function StaticDetailPage({
   params,
 }: {
@@ -38,7 +65,7 @@ export default async function StaticDetailPage({
           dangerouslySetInnerHTML={{
             __html: `${news.body}`,
           }}
-          className="prose prose-sm news-content md:prose-base border-2 px-4 py-8"
+          className="news-content prose prose-sm border-2 px-4 py-8 md:prose-base"
         />
       </Contents>
 

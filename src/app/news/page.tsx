@@ -4,6 +4,24 @@ import Navigation from "@/components/Navigation";
 import Contents from "@/components/Contents";
 import Title from "@/components/Title";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+const title = "News";
+const description = "老若男女未来学園からのお知らせの一覧です。";
+const slug = "news";
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  alternates: {
+    canonical: "/" + slug,
+  },
+  openGraph: {
+    title: title,
+    description: description,
+    url: `https://ronyaku.com/${slug}`,
+  },
+};
 
 export default async function StaticPage() {
   const contents = await getNewsList();

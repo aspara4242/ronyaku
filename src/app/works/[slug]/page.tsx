@@ -3,6 +3,39 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
 import Link from "next/link";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const works = await getWorksDetail(slug);
+
+  const title = works.title;
+  const description =
+    "老若男女未来学園の過去の活動『" + works.title + "』についての情報です。";
+  const images = works.ogp_image;
+
+  const metadata = {
+    title: title,
+    description: description,
+    alternates: {
+      canonical: "/works/" + slug,
+    },
+    openGraph: {
+      title: title,
+      description: description,
+      url: `https://ronyaku.com/works/${slug}`,
+      images: images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: images,
+    },
+  };
+
+  return metadata;
+}
 
 export default async function StaticDetailPage({
   params,

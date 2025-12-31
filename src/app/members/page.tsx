@@ -8,6 +8,24 @@ import Contents from "@/components/Contents";
 import Accordion from "@/components/Accordion";
 import TextBlockSm from "@/components/TextBlockSm";
 import { Members } from "@libs/members";
+import { Metadata } from "next";
+
+const title = "Members";
+const description = "老若男女未来学園の構成員の情報です。";
+const slug = "members";
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  alternates: {
+    canonical: "/" + slug,
+  },
+  openGraph: {
+    title: title,
+    description: description,
+    url: `https://ronyaku.com/${slug}`,
+  },
+};
 
 export default async function StaticPage() {
   const contents = shuffleArray(await getMembersList());

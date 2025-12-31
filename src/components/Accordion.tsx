@@ -20,7 +20,7 @@ const Accordion = ({ name, skills, children }: AccordionProps) => {
     <div>
       <div onClick={toggleAccordion} className="flex justify-between cursor-pointer pb-2">
         <div className="pr-2">
-          <p className="text-justify text-base md:text-lg font-bold mb-1">{name}</p>
+          <p className="text-justify text-base md:text-lg">{name}</p>
           <p className="text-xs md:text-sm">{skills}</p>
         </div>
         <Image
@@ -43,7 +43,7 @@ const Accordion = ({ name, skills, children }: AccordionProps) => {
         }}
       >
         <div className="overflow-hidden">
-          <div className="pt-2 whitespace-pre-wrap">{children}</div>
+          <div className="mt-2 whitespace-pre-wrap">{children}</div>
         </div>
       </div>
     </div>

@@ -15,16 +15,16 @@ export default async function StaticPage() {
       <Contents>
         <Title title="Works" ja_title="これまでの活動" />
 
-        <div className="w-full mx-auto">
+        <div className="mx-auto w-full">
           {contents.map((works) => (
-            <div key={works.id} className="border-b mb-4">
+            <div key={works.id} className="mb-4 border-b">
               <Link href={`/works/${works.slug}`}>
-                <p className="text-base md:text-lg text-justify">
+                <p className="text-justify text-base md:text-lg">
                   {works.title}
                 </p>
-                <p className="text-xs md:text-sm mb-2">
+                <p className="mb-2 text-justify text-xs md:text-sm">
                   {new Date(works.date).getFullYear()}
-                  {works.subtitle && (" / " + works.subtitle)}
+                  {works.subtitle && " / " + works.subtitle}
                 </p>
               </Link>
             </div>
@@ -36,4 +36,3 @@ export default async function StaticPage() {
     </div>
   );
 }
-

@@ -7,6 +7,9 @@ export type Works = {
     subtitle: string;
     body: string;
     date: string;
+    ogp_image:{
+        url:string;
+    }
 }
 
 export async function getWorksList(): Promise<Works[]> {
@@ -14,7 +17,7 @@ export async function getWorksList(): Promise<Works[]> {
         endpoint: 'works',
         queries: {
             fields: 'id,slug,title,subtitle,date',
-            limit: 10,
+            limit: 100,
             orders: '-date',
         },
     });

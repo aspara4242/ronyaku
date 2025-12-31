@@ -34,6 +34,9 @@ body {
   p:has(span.caption) {
     @apply mx-auto -mt-6 w-full max-w-[540px] opacity-75;
   }
+  p:has(span.large) {
+    @apply text-lg md:text-xl;
+  }
   hr {
     @apply my-8;
   }

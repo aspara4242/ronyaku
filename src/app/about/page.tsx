@@ -37,6 +37,7 @@ export default async function StaticPage() {
           alt="団体の集合写真。『アワ・マクベス』上演の際に舞台上で撮影されたもので、背後のスクリーンに作品タイトルが投影されている。内藤義明のみ、撮影時に不在だったため写真右下に雑に合成されている。"
           width={720}
           height={405}
+          priority={true}
         />
 
         <TextBlock title="団体概要">

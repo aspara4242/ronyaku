@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Plus from "./Plus";
+import { Plus } from "./Icons";
 
 interface AccordionProps {
   name: string;

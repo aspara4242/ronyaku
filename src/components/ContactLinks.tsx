@@ -1,10 +1,6 @@
 // components/ContactLinks.tsx
 import React from "react";
-import Image from "next/image";
-import XIcon from "./XIcon";
-import InstagramIcon from "./InstagramIcon";
-import YouTubeIcon from "./YouTubeIcon";
-import MailIcon from "./MailIcon";
+import { XIcon, InstagramIcon, YoutubeIcon, MailIcon } from "./Icons";
 
 const ContactLinks = () => {
   return (
@@ -36,7 +32,7 @@ const ContactLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <YouTubeIcon className="w-9" />
+            <YoutubeIcon className="w-9" />
           </a>
         </div>
       </div>

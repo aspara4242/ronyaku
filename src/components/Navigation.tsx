@@ -1,7 +1,7 @@
 // components/Navigation.tsx
 import React from "react";
 import Link from "next/link";
-import Logo from "./Logo";
+import { Logo } from "./Icons";
 
 const Navigation = () => {
   return (

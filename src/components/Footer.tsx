@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Copyright from "./Copyright";
 import ContactLinks from "./ContactLinks";
-import Logo from "./Logo";
+import { Logo } from "./Icons";
 
 export default function Footer() {
   return (

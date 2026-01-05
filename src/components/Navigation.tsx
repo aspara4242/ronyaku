@@ -1,25 +1,25 @@
 // components/Navigation.tsx
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 
 const Navigation = () => {
   return (
-    <div className="fixed top-0 hidden w-dvw items-center justify-between pt-6 md:flex">
-      <Link href="/" className="ml-6 inline-block">
-        <Image
-          className="h-9 w-auto"
-          src="/logo_white.svg"
-          alt="団体ロゴ"
-          width={30}
-          height={30}
-          priority={true}
-        />
+    <div className="fixed top-0 hidden w-dvw items-start justify-between pt-6 md:flex">
+      <Link href="/" className="ml-6 mt-1 inline-block">
+        <Logo className="h-9 w-auto" />
       </Link>
 
-      <div className="mr-6 text-right text-lg">
-        <Link href="/about">About Us</Link> / <Link href="/works">Works</Link> /{" "}
-        <Link href="/members">Members</Link> / <Link href="/news">News</Link>
+      <div className="mr-6 text-right text-lg leading-7">
+        <Link href="/about">About Us</Link>
+        {" / "}
+        <Link href="/works">Works</Link>
+        {" / "}
+        <Link href="/members">Members</Link>
+        <br />
+        <Link href="/news">News</Link>
+        {" / "}
+        <Link href="/articles">Articles</Link>
       </div>
     </div>
   );

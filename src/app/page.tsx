@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <div className="relative mx-auto w-[90%] max-w-[720px]">
-      <div className="mb-6 mt-6 flex justify-center">
+      <div className="mb-12 mt-6 flex justify-center">
         <Spinner src="/logo_main.png" className="w-3/4 max-w-[360px]" />
       </div>
 

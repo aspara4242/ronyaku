@@ -7,8 +7,13 @@ body {
   background-color: #0f0f0f;
 }
 
+p {
+  @apply leading-7;
+}
+
 .news-content,
-.works-content {
+.works-content,
+.articles-content {
   @apply max-w-none;
   * {
     color: #ffffff;
@@ -20,7 +25,7 @@ body {
     @apply mb-0;
   }
   p {
-    @apply mb-8 text-justify leading-relaxed;
+    @apply mb-8 text-justify;
   }
   h3 {
     @apply mb-2 text-base font-bold md:text-lg;
@@ -61,7 +66,8 @@ body {
   }
 }
 
-.works-content {
+.works-content,
+.articles-content {
   h3:before {
     content: "- ";
   }

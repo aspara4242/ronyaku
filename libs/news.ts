@@ -53,3 +53,14 @@ export async function getNewsDetail(slug: string): Promise<News> {
   });
   return data.contents[0];
 }
+
+export async function getNewsDraft(id: string, key: string): Promise<News> {
+  const data = await client.getListDetail<News>({
+    endpoint: "news",
+    contentId: id,
+    queries: {
+      draftKey: key,
+    },
+  });
+  return data;
+}

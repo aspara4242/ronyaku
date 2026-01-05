@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Plus from "./Plus";
 
 interface AccordionProps {
   name: string;
@@ -18,23 +19,15 @@ const Accordion = ({ name, skills, children }: AccordionProps) => {
 
   return (
     <div>
-      <div onClick={toggleAccordion} className="flex justify-between cursor-pointer pb-2">
+      <div
+        onClick={toggleAccordion}
+        className="flex cursor-pointer justify-between pb-2"
+      >
         <div className="pr-2">
           <p className="text-justify text-base md:text-lg">{name}</p>
           <p className="text-xs md:text-sm">{skills}</p>
         </div>
-        <Image
-            src={"/plus.svg"}
-            alt="プラス記号"
-            className="w-4 mr-1 md:w-5 md:mr-2"
-            width={24}
-            height={24}
-            priority={true}
-            style={{
-              transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
-              transition: "transform 0.3s linear",
-            }}
-          />
+        <Plus className="mr-1 w-4 md:mr-2 md:w-5" isOpen={isOpen} />
       </div>
       <div
         className="grid overflow-hidden transition-[grid-template-rows] duration-500"

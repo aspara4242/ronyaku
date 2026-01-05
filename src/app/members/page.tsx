@@ -35,7 +35,7 @@ export default async function StaticPage() {
       <Navigation />
 
       <Contents>
-        <Title title="Members" ja_title="構成員" />
+        <Title title="Members" ja_title="老若男女未来学園の構成員" />
 
         <div className="mx-auto w-full">
           {contents.map((members) => (

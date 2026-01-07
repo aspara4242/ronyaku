@@ -38,7 +38,7 @@ export default async function StaticPage() {
             <div key={articles.id} className="border-b">
               <Link href={`/articles/${articles.id}`}>
                 <img
-                  className="mb-2 aspect-[16/9] w-full object-cover"
+                  className="mb-3 aspect-[16/9] w-full object-cover"
                   src={articles.thumbnail.url}
                   alt={articles.thumbnail.alt}
                 />

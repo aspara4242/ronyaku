@@ -2,7 +2,7 @@
 
 @theme {
   --color-bg-black: #141415;
-  --color-bg-gray: #1E1E1F;
+  --color-bg-gray: #1e1e1f;
   --color-body-white: #e0e0e1;
   --color-light-gray: #b7b7b8;
   --color-gray: #98989a;
@@ -36,7 +36,10 @@ body {
     @apply mb-0;
   }
   p {
-    @apply mb-8 text-justify text-sm md:text-base leading-[1.75];
+    @apply mb-8 text-justify text-sm leading-[1.75] md:text-base;
+  }
+  a {
+    @apply underline;
   }
   h3 {
     @apply mb-2 text-base font-bold md:text-lg;
@@ -66,8 +69,7 @@ body {
     @apply mb-8 ps-0;
   }
   *::marker {
-    @apply font-bold;
-    color: #ffffff;
+    @apply font-bold text-body-white;
   }
   ul li p,
   ol li p {
@@ -84,7 +86,7 @@ body {
     content: "- ";
   }
   blockquote {
-    @apply mb-8 rounded-lg border bg-bg-gray p-4 font-normal not-italic;
+    @apply mb-8 border p-4 font-normal not-italic;
     h3:before,
     p:before {
       content: none;
@@ -95,5 +97,18 @@ body {
     > *:last-child {
       @apply mb-0;
     }
+  }
+}
+
+.articles-content {
+  blockquote {
+    @apply rounded-lg bg-bg-gray;
+  }
+  h3 {
+    @apply mb-2 text-base font-bold md:text-lg;
+  }
+  h3:before {
+    content: "◆";
+    @apply mb-8 border-b-2;
   }
 }

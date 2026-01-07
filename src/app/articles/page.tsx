@@ -46,7 +46,7 @@ export default async function StaticPage() {
                   height={articles.thumbnail.height}
                 />
                 <div className="mb-2 flex items-center justify-between">
-                  <p className="border px-1.5 text-xs font-bold leading-6 md:text-sm md:leading-6">
+                  <p className="border px-1.5 text-xs leading-6 font-bold md:text-sm md:leading-6">
                     {articles.category}
                   </p>
                   <p className="mr-0.5 text-sm md:text-base">

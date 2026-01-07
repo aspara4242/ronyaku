@@ -12,7 +12,7 @@ export async function generateMetadata({
   const news = await getNewsDetail(slug);
 
   const title = "News";
-  const description = "老若男女未来学園からのお知らせです。" + news.title;
+  const description = "老若男女未来学園からのお知らせです。〈" + news.title + "〉";
 
   const metadata = {
     title: title,

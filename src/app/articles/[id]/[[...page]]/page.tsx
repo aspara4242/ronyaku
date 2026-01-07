@@ -7,24 +7,30 @@ import { redirect } from "next/navigation";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ id: string }>;
 }) {
-  const { slug } = await params;
-  const articles = await getArticlesDetail(slug);
+  const { id } = await params;
+  const articles = await getArticlesDetail(id);
 
   const title = articles.title;
   const description = "老若男女未来学園の記事『" + articles.title + "』です。";
+  const images = articles.thumbnail;
 
   const metadata = {
     title: title,
     description: description,
     alternates: {
-      canonical: "/articles/" + slug,
+      canonical: "/articles/" + id,
     },
     openGraph: {
       title: title,
       description: description,
-      url: `https://ronyaku.com/articles/${slug}`,
+      url: `https://ronyaku.com/works/${id}`,
+      images: images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: images,
     },
   };
 
@@ -34,16 +40,16 @@ export async function generateMetadata({
 export default async function StaticDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string; page?: string[] }>;
+  params: Promise<{ id: string; page?: string[] }>;
 }) {
-  const { slug, page } = await params;
-  const articles = await getArticlesDetail(slug);
+  const { id, page } = await params;
+  const articles = await getArticlesDetail(id);
 
   const currentPage = page && page[0] ? parseInt(page[0], 10) : 1;
   const pageIndex = currentPage - 1;
 
   if (page && page[0] === "1") {
-    redirect(`/articles/${slug}`);
+    redirect(`/articles/${id}`);
   }
 
   const currentPageData = articles.bodies?.[pageIndex];
@@ -51,7 +57,10 @@ export default async function StaticDetailPage({
   return (
     <div>
       {articles.custom_css && (
-        <style precedence="high" dangerouslySetInnerHTML={{ __html: articles.custom_css }} />
+        <style
+          precedence="high"
+          dangerouslySetInnerHTML={{ __html: articles.custom_css }}
+        />
       )}
 
       <Navigation />
@@ -59,7 +68,7 @@ export default async function StaticDetailPage({
       <Contents>
         <div className="mb-6 flex items-center justify-end">
           <p className="mr-2 text-sm md:text-base">
-            {new Date(articles.publication_date)
+            {new Date(articles.publishedAt)
               .toLocaleDateString("ja-JP", {
                 timeZone: "Asia/Tokyo",
                 year: "numeric",

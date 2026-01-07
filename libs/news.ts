@@ -21,7 +21,7 @@ export async function getNewsListForTop(): Promise<News[]> {
     queries: {
       filters: filters,
       limit: 5,
-      orders: "-priority, -publication_date",
+      orders: "-priority,-publication_date,-publication_end_date,system:default",
     },
   });
   return data.contents;
@@ -37,7 +37,7 @@ export async function getNewsList(): Promise<News[]> {
     queries: {
       filters: filters,
       limit: 50,
-      orders: "-publication_date",
+      orders: "-publication_date,-publication_end_date,system:default",
     },
   });
   return data.contents;

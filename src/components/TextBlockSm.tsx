@@ -12,9 +12,9 @@ const TextBlockSm = ({ title, children, level = "h3" }: TextBlockProps) => {
 
   return (
     <div className="mb-4">
-      <Tag className="mb-1 text-sm font-bold md:text-base">{title}</Tag>
+      <Tag className="mb-2 text-sm font-bold md:text-base">{title}</Tag>
 
-      <div className="text-justify text-sm leading-7 md:text-base md:leading-7">
+      <div className="text-justify text-sm leading-[1.75] md:text-base md:leading-[1.75]">
         {children}
       </div>
     </div>

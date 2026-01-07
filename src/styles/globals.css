@@ -8,7 +8,7 @@ body {
 }
 
 p {
-  @apply leading-7;
+  @apply leading-[1.75];
 }
 
 .news-content,

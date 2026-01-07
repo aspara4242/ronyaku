@@ -6,12 +6,12 @@
   --color-body-white: #e0e0e1;
   --color-light-gray: #b7b7b8;
   --color-gray: #98989a;
-  --color-red: #ff423c;
-  --color-yellow: #ffd600;
+  --color-red: #ffb0ad;
+  --color-yellow: #ffee99;
   --color-orange: #ff9230;
   --color-green: #30d158;
   --color-mint: #00dac3;
-  --color-blue: #0091ff;
+  --color-blue: #addcff;
   --color-cyan: #3cd3fe;
   --color-indigo: #6d7cff;
   --color-purple: #db34f2;
@@ -48,7 +48,7 @@ body {
     @apply mb-2 text-sm font-bold md:text-base;
   }
   figure {
-    @apply mx-auto mb-8 w-full max-w-[540px];
+    @apply mx-auto mb-8 w-full max-w-135;
   }
   figcaption {
     @apply mt-2 text-sm opacity-75 md:text-base;
@@ -102,13 +102,30 @@ body {
 
 .articles-content {
   blockquote {
-    @apply rounded-lg bg-bg-gray;
+    @apply rounded-md bg-bg-gray;
   }
   h3 {
-    @apply mb-2 text-base font-bold md:text-lg;
+    @apply mt-16 mb-8 border-b-2 pb-1;
   }
   h3:before {
     content: "◆";
-    @apply mb-8 border-b-2;
+  }
+  .interviewer {
+    @apply text-light-gray;
+  }
+  .interviewer:before {
+    content: "── ";
+  }
+  .custom-red {
+    @apply text-red;
+  }
+  .custom-yellow {
+    @apply text-yellow;
+  }
+  .custom-blue {
+    @apply text-blue;
+  }
+  .custom-gray {
+    @apply text-light-gray;
   }
 }

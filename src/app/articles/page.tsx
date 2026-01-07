@@ -41,7 +41,7 @@ export default async function StaticPage() {
                 <Image
                   src={articles.thumbnail.url}
                   alt={articles.thumbnail.alt}
-                  className="mb-3 aspect-[16/9] w-full object-cover"
+                  className="mb-3 aspect-video w-full object-cover"
                   width={articles.thumbnail.width}
                   height={articles.thumbnail.height}
                 />

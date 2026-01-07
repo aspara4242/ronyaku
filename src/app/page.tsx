@@ -3,6 +3,7 @@ import { getNewsListForTop } from "@libs/news";
 import Spinner from "@/components/Spinner";
 import Copyright from "@/components/Copyright";
 import ContactLinks from "@/components/ContactLinks";
+import NewsList from "@/components/NewsList";
 
 export default async function Home() {
   const contents = await getNewsListForTop();
@@ -21,37 +22,16 @@ export default async function Home() {
         <br />
         ・<br />
         <Link href="/members">Members</Link>
+        <br />
+        ・<br />
+        <Link href="/articles">Articles</Link>
       </div>
 
       <div className="mb-36">
         <p className="mb-4 text-left text-lg">
           <Link href="/news">News</Link>
         </p>
-
-        <div className="mx-auto w-full">
-          {contents.map((news) => (
-            <div key={news.id} className="mb-4 border-b text-sm md:text-base">
-              <div className="mb-2 flex items-center">
-                <p className="mr-2 flex w-[4rem] items-center justify-center border text-xs md:w-[5rem] md:text-sm">
-                  {news.category}
-                </p>
-                <p className="text-sm md:text-base">
-                  {new Date(news.publication_date)
-                    .toLocaleDateString("ja-JP", {
-                      timeZone: "Asia/Tokyo",
-                      year: "numeric",
-                      month: "numeric",
-                      day: "numeric",
-                    })
-                    .replace(/\//g, "-")}
-                </p>
-              </div>
-              <Link href={`/news/${news.slug}`}>
-                <p className="mb-2 text-justify">{news.title}</p>
-              </Link>
-            </div>
-          ))}
-        </div>
+        <NewsList contents={contents} />
       </div>
 
       <ContactLinks />

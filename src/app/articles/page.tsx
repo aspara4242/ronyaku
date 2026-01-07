@@ -60,7 +60,7 @@ export default async function StaticPage() {
                 <p className="mb-2 text-justify text-base font-bold md:text-lg">
                   {articles.title}
                 </p>
-                <p className="mb-2 text-xs font-bold md:text-sm">
+                <p className="mb-4 text-xs font-bold md:text-sm">
                   {articles.tags?.map((item) => (
                     <span key={item.tag} className="mr-2">
                       #{item.tag}

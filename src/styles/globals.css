@@ -1,14 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-  color: #ffffff;
-  background-color: #0f0f0f;
+@theme {
+  --color-bg-black: #141415;
+  --color-bg-gray: #1E1E1F;
+  --color-body-white: #e0e0e1;
+  --color-light-gray: #b7b7b8;
+  --color-gray: #98989a;
+  --color-red: #ff423c;
+  --color-yellow: #ffd600;
+  --color-orange: #ff9230;
+  --color-green: #30d158;
+  --color-mint: #00dac3;
+  --color-blue: #0091ff;
+  --color-cyan: #3cd3fe;
+  --color-indigo: #6d7cff;
+  --color-purple: #db34f2;
 }
 
-p {
-  @apply leading-[1.75];
+body {
+  color: var(--color-body-white);
+  background-color: var(--color-bg-black);
 }
 
 .news-content,
@@ -16,7 +27,7 @@ p {
 .articles-content {
   @apply max-w-none;
   * {
-    color: #ffffff;
+    color: var(--color-body-white);
   }
   > *:first-child {
     @apply mt-0;
@@ -25,7 +36,7 @@ p {
     @apply mb-0;
   }
   p {
-    @apply mb-8 text-justify;
+    @apply mb-8 text-justify text-sm md:text-base leading-[1.75];
   }
   h3 {
     @apply mb-2 text-base font-bold md:text-lg;
@@ -36,10 +47,11 @@ p {
   figure {
     @apply mx-auto mb-8 w-full max-w-[540px];
   }
-  p:has(span.caption) {
-    @apply mx-auto -mt-6 w-full max-w-[540px] opacity-75;
+  figcaption {
+    @apply mt-2 text-sm opacity-75 md:text-base;
+    color: var(--color-light-gray);
   }
-  p:has(span.large) {
+  span.large {
     @apply text-lg md:text-xl;
   }
   hr {
@@ -47,7 +59,7 @@ p {
   }
   ul,
   ol {
-    @apply mb-8 list-outside pl-0 ps-4;
+    @apply mb-8 list-outside ps-4 pl-0;
   }
   ul li,
   ol li {
@@ -59,7 +71,7 @@ p {
   }
   ul li p,
   ol li p {
-    @apply mb-4 mt-2;
+    @apply mt-2 mb-4;
   }
   div:has(iframe) {
     @apply mb-8;
@@ -72,7 +84,7 @@ p {
     content: "- ";
   }
   blockquote {
-    @apply mb-8 border p-4 font-normal not-italic;
+    @apply mb-8 rounded-lg border bg-bg-gray p-4 font-normal not-italic;
     h3:before,
     p:before {
       content: none;

@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Contents from "@/components/Contents";
 import Title from "@/components/Title";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 import { Metadata } from "next";
 
 const title = "Articles";
@@ -33,14 +34,16 @@ export default async function StaticPage() {
       <Contents>
         <Title title="Articles" ja_title="老若男女未来学園の記事" />
 
-        <div className="mx-auto w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="mx-auto grid w-full grid-cols-1 gap-8 sm:grid-cols-2">
           {contents.map((articles) => (
             <div key={articles.id} className="border-b">
               <Link href={`/articles/${articles.id}`}>
-                <img
-                  className="mb-3 aspect-[16/9] w-full object-cover"
+                <Image
                   src={articles.thumbnail.url}
                   alt={articles.thumbnail.alt}
+                  className="mb-3 aspect-[16/9] w-full object-cover"
+                  width={articles.thumbnail.width}
+                  height={articles.thumbnail.height}
                 />
                 <div className="mb-2 flex items-center justify-between">
                   <p className="border px-1.5 text-xs font-bold leading-6 md:text-sm md:leading-6">
@@ -62,7 +65,7 @@ export default async function StaticPage() {
                 </p>
                 <p className="mb-4 text-xs font-bold md:text-sm">
                   {articles.tags?.map((item) => (
-                    <span key={item.tag} className="mr-2">
+                    <span key={item.tag} className="mr-2 inline-block">
                       #{item.tag}
                     </span>
                   ))}

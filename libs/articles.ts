@@ -12,6 +12,8 @@ export type Articles = {
   thumbnail: {
     url: string;
     alt: string;
+    width: number;
+    height: number;
   };
   custom_css: string;
   bodies: {

@@ -42,7 +42,7 @@ export default async function StaticPage() {
                   src={articles.thumbnail.url}
                   alt={articles.thumbnail.alt}
                 />
-                <div className="mb-2 flex items-start justify-between">
+                <div className="mb-2 flex items-center justify-between">
                   <p className="border px-1.5 text-xs font-bold leading-6 md:text-sm md:leading-6">
                     {articles.category}
                   </p>
@@ -57,10 +57,10 @@ export default async function StaticPage() {
                       .replace(/\//g, "-")}
                   </p>
                 </div>
-                <p className="mb-2 text-justify text-lg font-bold">
+                <p className="mb-2 text-justify text-base font-bold md:text-lg">
                   {articles.title}
                 </p>
-                <p className="mb-4 text-xs font-bold md:text-sm">
+                <p className="mb-2 text-xs font-bold md:text-sm">
                   {articles.tags?.map((item) => (
                     <span key={item.tag} className="mr-2">
                       #{item.tag}

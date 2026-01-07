@@ -1,14 +1,14 @@
 // components/Copyright.tsx
-import React from 'react'
+import React from "react";
 
 const Copyright = () => {
   return (
     <div>
-      <p className="absolute w-full font-extralight text-xs md:text-sm text-center pb-4">
+      <p className="absolute w-full pb-4 text-center text-xs font-extralight md:text-sm">
         © 2025 Ronyakunannyo Mirai Gakuen
       </p>
     </div>
-  )
-}
+  );
+};
 
 export default Copyright;

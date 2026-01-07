@@ -1,5 +1,5 @@
 // components/Contents.tsx
-import React from 'react'
+import React from "react";
 
 interface ContentsProps {
   children?: React.ReactNode;
@@ -7,10 +7,10 @@ interface ContentsProps {
 
 const Contents = ({ children }: ContentsProps) => {
   return (
-    <div className="w-[90%] max-w-[720px] mx-auto mt-12 md:mt-28 mb-36">
+    <div className="mx-auto mb-36 mt-12 w-[90%] max-w-[720px] md:mt-28">
       {children}
     </div>
   );
-}
+};
 
-export default Contents
+export default Contents;

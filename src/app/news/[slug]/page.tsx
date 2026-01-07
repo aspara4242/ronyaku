@@ -54,7 +54,7 @@ export default async function StaticDetailPage({
               })
               .replace(/\//g, "-")}
           </p>
-          <p className="flex w-[4rem] items-center justify-center border text-xs md:w-[5rem] md:text-sm">
+          <p className="flex w-16 items-center justify-center border text-xs md:w-20 md:text-sm">
             {news.category}
           </p>
         </div>

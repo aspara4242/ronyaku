@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
 import { redirect } from "next/navigation";
+import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -66,8 +67,11 @@ export default async function StaticDetailPage({
       <Navigation />
 
       <Contents>
-        <div className="mb-6 flex items-center justify-end">
-          <p className="mr-2 text-sm md:text-base">
+        <div className="mb-8 flex items-center justify-between">
+          <p className="border px-1.5 text-xs font-bold leading-6 md:text-sm md:leading-6">
+            {articles.category}
+          </p>
+          <p className="mr-0.5 text-sm md:text-base">
             {new Date(articles.publishedAt)
               .toLocaleDateString("ja-JP", {
                 timeZone: "Asia/Tokyo",
@@ -77,13 +81,24 @@ export default async function StaticDetailPage({
               })
               .replace(/\//g, "-")}
           </p>
-          <p className="flex w-[4rem] items-center justify-center border text-xs md:w-[5rem] md:text-sm">
-            {articles.category}
-          </p>
         </div>
-        <h2 className="mb-6 text-center text-base font-bold md:text-lg">
+        <h2 className="mb-7 text-center text-xl font-bold md:text-2xl">
           {articles.title}
         </h2>
+        <p className="mb-8 text-center text-sm font-bold md:text-base">
+          {articles.tags?.map((item) => (
+            <span key={item.tag} className="mr-2 inline-block">
+              #{item.tag}
+            </span>
+          ))}
+        </p>
+        <Image
+          src={articles.thumbnail.url}
+          alt={articles.thumbnail.alt}
+          className="mb-8 w-full"
+          width={articles.thumbnail.width}
+          height={articles.thumbnail.height}
+        />
         <div
           dangerouslySetInnerHTML={{
             __html: `${currentPageData.body}`,

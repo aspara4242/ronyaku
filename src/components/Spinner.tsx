@@ -9,7 +9,11 @@ interface Props {
   className?: string;
 }
 
-export default function Spinner({ src, baseSpeed = 0.35, className = "" }: Props) {
+export default function Spinner({
+  src,
+  baseSpeed = 0.35,
+  className = "",
+}: Props) {
   const [rotation, setRotation] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isRotating, setIsRotating] = useState(false);
@@ -28,8 +32,8 @@ export default function Spinner({ src, baseSpeed = 0.35, className = "" }: Props
   };
 
   return (
-    <div 
-      className={`block aspect-square z-1 ${className} ${
+    <div
+      className={`block aspect-square ${className} ${
         isRotating ? "cursor-default" : "cursor-pointer"
       }`}
       style={{
@@ -42,9 +46,9 @@ export default function Spinner({ src, baseSpeed = 0.35, className = "" }: Props
       <Image
         src={src}
         alt="老若男女未来学園ロゴ。クリックまたはタップすると回転する。"
-        className="w-full h-full object-contain"
-        width={600}
-        height={600}
+        className="size-full object-contain"
+        width={750}
+        height={367}
         priority={true}
       />
     </div>

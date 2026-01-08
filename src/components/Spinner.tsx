@@ -4,13 +4,11 @@ import { useState } from "react";
 import { RonyakuLogo } from "./RonyakuLogo";
 
 interface Props {
-  src: string;
   baseSpeed?: number;
   className?: string;
 }
 
 export default function Spinner({
-  src,
   baseSpeed = 0.35,
   className = "",
 }: Props) {

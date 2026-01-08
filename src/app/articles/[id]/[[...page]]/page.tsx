@@ -68,7 +68,7 @@ export default async function StaticDetailPage({
 
       <Contents>
         <div className="mb-8 flex items-center justify-between">
-          <p className="border px-1.5 text-xs font-bold leading-6 md:text-sm md:leading-6">
+          <p className="border px-1.5 py-1 text-xs font-bold leading-6 md:text-sm md:leading-6">
             {articles.category}
           </p>
           <p className="mr-0.5 text-sm md:text-base">
@@ -82,7 +82,7 @@ export default async function StaticDetailPage({
               .replace(/\//g, "-")}
           </p>
         </div>
-        <h2 className="mb-7 text-center text-xl font-bold md:text-2xl">
+        <h2 className="mb-4 text-center text-xl font-bold md:text-2xl">
           {articles.title}
         </h2>
         <p className="mb-8 text-center text-sm font-bold md:text-base">

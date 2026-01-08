@@ -8,12 +8,12 @@ import { Logo } from "./Icons";
 export default function Footer() {
   return (
     <div>
-      <div className="mb-6 md:hidden">
+      <div className="mb-8 md:hidden">
         <Link href="/">
-          <Logo className="mx-auto mb-6 h-9" />
+          <Logo className="mx-auto mb-8 h-9" />
         </Link>
 
-        <div className="text-center text-base leading-8">
+        <div className="height-trim text-center text-base leading-8">
           <Link href="/about">About Us</Link>
           {" / "}
           <Link href="/works">Works</Link>

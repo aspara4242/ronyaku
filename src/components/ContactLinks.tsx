@@ -4,7 +4,7 @@ import { XIcon, InstagramIcon, YoutubeIcon, MailIcon } from "./Icons";
 
 const ContactLinks = () => {
   return (
-    <div>
+    <div className="mb-12">
       <div className="mx-auto mb-6 grid w-fit grid-cols-3 items-center justify-center gap-6">
         <div className="flex justify-start">
           <a
@@ -37,7 +37,7 @@ const ContactLinks = () => {
         </div>
       </div>
 
-      <div className="mb-12 flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-2">
         <MailIcon className="w-6" />
         <p className="text-sm">ronyaku4444@gmail.com</p>
       </div>

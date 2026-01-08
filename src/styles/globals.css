@@ -5,21 +5,46 @@
   --color-bg-gray: #1e1e1f;
   --color-body-white: #e0e0e1;
   --color-light-gray: #b7b7b8;
-  --color-gray: #98989a;
   --color-red: #ffb0ad;
+  --color-blue: #addcff;
   --color-yellow: #ffee99;
+
+  --color-gray: #98989a;
   --color-orange: #ff9230;
   --color-green: #30d158;
   --color-mint: #00dac3;
-  --color-blue: #addcff;
   --color-cyan: #3cd3fe;
   --color-indigo: #6d7cff;
   --color-purple: #db34f2;
+
+  --height-trim: calc((1em - 1lh) / 2);
 }
 
 body {
   color: var(--color-body-white);
   background-color: var(--color-bg-black);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+.height-trim {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    inline-size: 0;
+    block-size: 1px;
+  }
+  &::before {
+    margin-block-end: var(--height-trim);
+  }
+  &::after {
+    margin-block-start: var(--height-trim);
+  }
 }
 
 .news-content,
@@ -42,17 +67,16 @@ body {
     @apply underline;
   }
   h3 {
-    @apply mb-2 text-base font-bold md:text-lg;
+    @apply mb-4 text-base font-bold md:text-lg;
   }
   h4 {
-    @apply mb-2 text-sm font-bold md:text-base;
+    @apply mb-4 text-sm font-bold md:text-base;
   }
   figure {
     @apply mx-auto mb-8 w-full max-w-135;
   }
   figcaption {
-    @apply mt-2 text-sm opacity-75 md:text-base;
-    color: var(--color-light-gray);
+    @apply mt-2 text-sm text-light-gray opacity-75 md:text-base;
   }
   span.large {
     @apply text-lg md:text-xl;
@@ -62,7 +86,7 @@ body {
   }
   ul,
   ol {
-    @apply mb-8 list-outside ps-4 pl-0;
+    @apply mb-8 list-outside ps-4 pl-0 text-sm md:text-base;
   }
   ul li,
   ol li {
@@ -82,14 +106,17 @@ body {
 
 .works-content,
 .articles-content {
-  h3:before {
-    content: "- ";
+  h3 {
+    @apply before:content-['-_'];
+    &::before {
+      display: inline;
+    }
   }
   blockquote {
     @apply mb-8 border p-4 font-normal not-italic;
-    h3:before,
-    p:before {
-      content: none;
+    h3::before,
+    p::before {
+      content: "";
     }
     > *:first-child {
       @apply mt-0;
@@ -105,16 +132,13 @@ body {
     @apply rounded-md bg-bg-gray;
   }
   h3 {
-    @apply mt-16 mb-8 border-b-2 pb-1;
-  }
-  h3:before {
-    content: "◆";
+    @apply mt-16 mb-8 border-b-2 pb-2 leading-none before:content-['◆'];
+    &::before {
+      display: inline;
+    }
   }
   .interviewer {
-    @apply text-light-gray;
-  }
-  .interviewer:before {
-    content: "── ";
+    @apply text-light-gray before:content-['──_'];
   }
   .custom-red {
     @apply text-red;

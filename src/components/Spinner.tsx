@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { RonyakuLogo } from "./RonyakuLogo";
 
 interface Props {
   src: string;
@@ -43,14 +43,7 @@ export default function Spinner({
       onClick={handleRotate}
       onTransitionEnd={() => setIsRotating(false)}
     >
-      <Image
-        src={src}
-        alt="老若男女未来学園ロゴ。クリックまたはタップすると回転する。"
-        className="size-full object-contain"
-        width={750}
-        height={367}
-        priority={true}
-      />
+      <RonyakuLogo className="size-full object-contain" />
     </div>
   );
 }

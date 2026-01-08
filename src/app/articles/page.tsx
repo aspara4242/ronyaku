@@ -41,12 +41,12 @@ export default async function StaticPage() {
                 <Image
                   src={articles.thumbnail.url}
                   alt={articles.thumbnail.alt}
-                  className="mb-3 aspect-video w-full object-cover"
+                  className="mb-4 aspect-video w-full object-cover"
                   width={articles.thumbnail.width}
                   height={articles.thumbnail.height}
                 />
-                <div className="mb-2 flex items-center justify-between">
-                  <p className="border px-1.5 text-xs leading-6 font-bold md:text-sm md:leading-6">
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="border px-1.5 py-1 text-xs leading-6 font-bold md:text-sm md:leading-6">
                     {articles.category}
                   </p>
                   <p className="mr-0.5 text-sm md:text-base">

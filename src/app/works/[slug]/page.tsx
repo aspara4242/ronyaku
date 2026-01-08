@@ -51,7 +51,7 @@ export default async function StaticDetailPage({
 
       <Contents>
         <div className="mb-8 border-b pb-4 text-center">
-          <h2 className="mb-2 text-center text-lg font-bold md:mb-2 md:text-xl">
+          <h2 className="mb-4 text-center text-lg font-bold md:mb-2 md:text-xl">
             {works.title}
           </h2>
           <p className="text-center text-sm md:text-base">

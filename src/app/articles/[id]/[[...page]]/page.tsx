@@ -119,7 +119,7 @@ export default async function StaticDetailPage({
           <div className="-mb-16">
             <p className="mb-16 text-center text-sm underline md:text-base">
               <Link
-                href={`/articles/${articles.id}/${isLastPage ? 1 : currentPage + 1}`}
+                href={`/articles/${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}`}
               >
                 {isLastPage ? "最初のページへ" : "次のページへ"}
               </Link>

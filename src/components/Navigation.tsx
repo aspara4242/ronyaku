@@ -6,7 +6,7 @@ import { Logo } from "./Icons";
 const Navigation = () => {
   return (
     <div className="fixed top-0 hidden w-dvw items-start justify-between pt-6 md:flex">
-      <Link href="/" className="ml-6 mt-1 inline-block">
+      <Link href="/" className="ml-6 mt-1 inline-block" aria-label="トップページに戻る">
         <Logo className="h-9 w-auto" />
       </Link>
 

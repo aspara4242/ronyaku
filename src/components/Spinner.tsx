@@ -19,7 +19,7 @@ export default function Spinner({
   const handleRotate = () => {
     if (isRotating) return;
 
-    // ランダムな回転角度（360度〜1800度）
+    // ランダムな回転角度（720度〜1800度）
     const randomDegree = Math.floor(Math.random() * 1080) + 720;
     // 速度を一定にする計算
     const nextDuration = (randomDegree / 360) * baseSpeed;
@@ -40,6 +40,7 @@ export default function Spinner({
       }}
       onClick={handleRotate}
       onTransitionEnd={() => setIsRotating(false)}
+      area-label="老若男女未来学園のロゴ。クリックすると2から5回転の範囲内でランダムに回転する。"
     >
       <RonyakuLogo className="size-full object-contain" />
     </div>

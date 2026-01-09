@@ -4,18 +4,17 @@
   --color-bg-black: #141415;
   --color-bg-gray: #1e1e1f;
   --color-body-white: #e0e0e1;
-  --color-light-gray: #b7b7b8;
-  --color-red: #ff8985;
-  --color-blue: #85caff;
-  --color-yellow: #ffeb85;
 
   --color-gray: #98989a;
+  --color-light-gray: #b7b7b8;
+
+  --color-blue: #47A3FF;
+  --color-green: #47d76b;
+  --color-yellow: #ffe45c;
+  --color-red: #FF7570;
+  --color-purple: #a98de2;
   --color-orange: #ffb370;
-  --color-green: #79e293;
-  --color-mint: #70fff1;
-  --color-cyan: #71e0fe;
-  --color-indigo: #adb6ff;
-  --color-purple: #f5c5fb;
+  --color-pink: #FF99AA;
 
   --height-trim: calc((1em - 1lh) / 2);
 }
@@ -81,6 +80,12 @@ h5,
   span.large {
     @apply text-lg md:text-xl;
   }
+  span.extra-large {
+    @apply text-3xl md:text-5xl;
+  }
+  span.xx-large {
+    @apply text-6xl md:text-8xl;
+  }
   hr {
     @apply my-8;
   }
@@ -140,16 +145,31 @@ h5,
   .interviewer {
     @apply text-light-gray before:content-['──_'];
   }
-  .custom-red {
-    @apply text-red;
+  .custom-gray {
+    @apply text-gray;
   }
-  .custom-yellow {
-    @apply text-yellow;
+  .custom-light-gray {
+    @apply text-light-gray;
   }
   .custom-blue {
     @apply text-blue;
   }
-  .custom-gray {
-    @apply text-light-gray;
+  .custom-green {
+    @apply text-green;
+  }
+  .custom-yellow {
+    @apply text-yellow;
+  }
+  .custom-red {
+    @apply text-red;
+  }
+  .custom-purple {
+    @apply text-purple;
+  }
+  .custom-orange {
+    @apply text-orange;
+  }
+  .custom-pink {
+    @apply text-pink;
   }
 }

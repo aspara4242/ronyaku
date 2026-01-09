@@ -116,7 +116,7 @@ export default async function StaticDetailPage({
           className="articles-content prose prose-sm md:prose-base mb-16"
         />
         {totalPages >= 2 && (
-          <div className="-mb-16">
+          <div>
             <p className="mb-16 text-center text-sm underline md:text-base">
               <Link
                 href={`/articles/${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}`}

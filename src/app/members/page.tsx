@@ -9,6 +9,7 @@ import Accordion from "@/components/Accordion";
 import TextBlockSm from "@/components/TextBlockSm";
 import { Members } from "@libs/members";
 import { Metadata } from "next";
+import { metadata as defaultMetadata } from "@/app/layout";
 
 const title = "Members";
 const description = "老若男女未来学園の構成員の情報です。";
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     canonical: "/" + slug,
   },
   openGraph: {
+    ...defaultMetadata.openGraph,
     title: title,
     description: description,
     url: `https://ronyaku.com/${slug}`,

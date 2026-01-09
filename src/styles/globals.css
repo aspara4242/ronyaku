@@ -5,17 +5,17 @@
   --color-bg-gray: #1e1e1f;
   --color-body-white: #e0e0e1;
   --color-light-gray: #b7b7b8;
-  --color-red: #ffb0ad;
-  --color-blue: #addcff;
-  --color-yellow: #ffee99;
+  --color-red: #ff8985;
+  --color-blue: #85caff;
+  --color-yellow: #ffeb85;
 
   --color-gray: #98989a;
-  --color-orange: #ff9230;
-  --color-green: #30d158;
-  --color-mint: #00dac3;
-  --color-cyan: #3cd3fe;
-  --color-indigo: #6d7cff;
-  --color-purple: #db34f2;
+  --color-orange: #ffb370;
+  --color-green: #79e293;
+  --color-mint: #70fff1;
+  --color-cyan: #71e0fe;
+  --color-indigo: #adb6ff;
+  --color-purple: #f5c5fb;
 
   --height-trim: calc((1em - 1lh) / 2);
 }

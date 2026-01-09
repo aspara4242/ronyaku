@@ -1,8 +1,5 @@
 import { getNewsList } from "@libs/news";
-import Navigation from "@/components/Navigation";
-import Contents from "@/components/Contents";
 import Title from "@/components/Title";
-import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import NewsList from "@/components/NewsList";
 import { metadata as defaultMetadata } from "@/app/layout";
@@ -30,15 +27,9 @@ export default async function StaticPage() {
 
   return (
     <div>
-      <Navigation />
+      <Title title="News" ja_title="老若男女未来学園からのお知らせ" />
 
-      <Contents>
-        <Title title="News" ja_title="老若男女未来学園からのお知らせ" />
-
-        <NewsList contents={contents} />
-      </Contents>
-
-      <Footer />
+      <NewsList contents={contents} />
     </div>
   );
 }

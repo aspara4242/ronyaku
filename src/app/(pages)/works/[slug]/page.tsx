@@ -1,7 +1,4 @@
 import { getWorksDetail } from "@libs/works";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import Contents from "@/components/Contents";
 import Link from "next/link";
 import { metadata as defaultMetadata } from "@/app/layout";
 
@@ -50,30 +47,27 @@ export default async function StaticDetailPage({
 
   return (
     <div>
-      <Navigation />
+      <div className="mb-8 border-b pb-4 text-center">
+        <h2 className="mb-4 text-center text-lg font-bold md:text-xl">
+          {works.title}
+        </h2>
 
-      <Contents>
-        <div className="mb-8 border-b pb-4 text-center">
-          <h2 className="mb-4 text-center text-lg font-bold md:text-xl">
-            {works.title}
-          </h2>
-          <p className="text-center text-sm md:text-base">
-            {new Date(works.date).getFullYear()}
-            {works.subtitle && " / " + works.subtitle}
-          </p>
-        </div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${works.body}`,
-          }}
-          className="works-content prose prose-sm md:prose-base mb-8 border-b pb-8"
-        />
-        <p className="w-full text-center text-sm underline md:text-base">
-          <Link href="/works">一覧に戻る</Link>
+        <p className="text-center text-sm md:text-base">
+          {new Date(works.date).getFullYear()}
+          {works.subtitle && " / " + works.subtitle}
         </p>
-      </Contents>
+      </div>
 
-      <Footer />
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `${works.body}`,
+        }}
+        className="works-content prose prose-sm md:prose-base mb-8 border-b pb-8"
+      />
+
+      <p className="w-full text-center text-sm underline md:text-base">
+        <Link href="/works">一覧に戻る</Link>
+      </p>
     </div>
   );
 }

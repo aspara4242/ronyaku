@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <div>
       <div className="mb-8 md:hidden">
-        <Link href="/">
+        <Link href="/" aria-label="トップページに戻る">
           <Logo className="mx-auto mb-8 h-9" />
         </Link>
 

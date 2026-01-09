@@ -10,22 +10,24 @@ export default async function Home() {
 
   return (
     <div className="relative mx-auto w-[90%] max-w-180">
-      <div className="mb-12 mt-6 flex justify-center">
-        <Spinner className="w-3/4 max-w-90" />
-      </div>
+      <main>
+        <div className="mt-6 mb-12 flex justify-center">
+          <Spinner className="w-3/4 max-w-90" />
+        </div>
 
-      <div className="mb-24 text-center text-lg leading-tight">
-        <Link href="/about">About Us</Link>
-        <br />
-        ・<br />
-        <Link href="/works">Works</Link>
-        <br />
-        ・<br />
-        <Link href="/members">Members</Link>
-        <br />
-        ・<br />
-        <Link href="/articles">Articles</Link>
-      </div>
+        <div className="mb-24 text-center text-lg leading-tight">
+          <Link href="/about">About Us</Link>
+          <br />
+          ・<br />
+          <Link href="/works">Works</Link>
+          <br />
+          ・<br />
+          <Link href="/members">Members</Link>
+          <br />
+          ・<br />
+          <Link href="/articles">Articles</Link>
+        </div>
+      </main>
 
       <div className="mb-36">
         <p className="mb-4 text-left text-lg">

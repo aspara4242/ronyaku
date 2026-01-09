@@ -1,4 +1,4 @@
-import { getArticlesDetail } from "@libs/articles";
+import { getArticlesDraft } from "@libs/articles";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
@@ -8,13 +8,16 @@ import Link from "next/link";
 
 export async function generateMetadata({
   params,
+  searchParams
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string; page?: string[] }>,
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { id } = await params;
-  const articles = await getArticlesDetail(id);
+  const { id, page } = await params;
+  const {key} = await searchParams;
+  const articles = await getArticlesDraft(id, key as string);
 
-  const title = articles.title;
+  const title = "【下書き】" + articles.title;
   const description = "老若男女未来学園の記事『" + articles.title + "』です。";
   const images = articles.thumbnail;
 
@@ -41,11 +44,16 @@ export async function generateMetadata({
 
 export default async function StaticDetailPage({
   params,
+  searchParams
 }: {
-  params: Promise<{ id: string; page?: string[] }>;
+  params: Promise<{ id: string; page?: string[] }>,
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { id, page } = await params;
-  const articles = await getArticlesDetail(id);
+  const {key} = await searchParams;
+  const articles = await getArticlesDraft(id, key as string);
+
+  console.log("===== " + id + ", " + key + " =====");
 
   const totalPages = articles.bodies?.length;
   const currentPage = page && page[0] ? parseInt(page[0], 10) : 1;
@@ -118,7 +126,7 @@ export default async function StaticDetailPage({
           <div>
             <p className="mb-16 text-center text-sm underline md:text-base">
               <Link
-                href={`/articles/${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}`}
+                href={`/articles/${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}?key=${key}`}
               >
                 {isLastPage ? "最初のページへ" : "次のページへ"}
               </Link>
@@ -127,7 +135,7 @@ export default async function StaticDetailPage({
               {pages.map((num) => (
                 <li key={num}>
                   <Link
-                    href={`/articles/${articles.id}${num === 1 ? "" : "/" + num}`}
+                    href={`/articles/${articles.id}${num === 1 ? "" : "/" + num}?key=${key}`}
                     className={`flex h-10 w-8 items-center justify-center rounded-sm border font-bold ${num === currentPage ? "pointer-events-none text-gray" : "bg-bg-gray"}`}
                   >
                     {num}

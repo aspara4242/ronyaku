@@ -8,9 +8,10 @@ const ContactLinks = () => {
       <div className="mx-auto mb-6 grid w-fit grid-cols-3 items-center justify-center gap-6">
         <div className="flex justify-start">
           <a
-            href="https://twitter.com/ronyaku4444"
+            href="https://x.com/ronyaku4444"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Xの老若男女未来学園公式アカウントを新しいタブで開く"
           >
             <XIcon className="w-7" />
           </a>
@@ -21,6 +22,7 @@ const ContactLinks = () => {
             href="https://www.instagram.com/ronyaku44"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagramの老若男女未来学園公式アカウントを新しいタブで開く"
           >
             <InstagramIcon className="w-8" />
           </a>
@@ -31,6 +33,7 @@ const ContactLinks = () => {
             href="https://www.youtube.com/@ronyaku4444"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="YouTubeの老若男女未来学園公式チャンネルを新しいタブで開く"
           >
             <YoutubeIcon className="w-9" />
           </a>

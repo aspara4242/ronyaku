@@ -94,7 +94,7 @@ export default async function StaticDetailPage({
           className={`${currentPage === 1 ? "mb-8" : "mb-16"} text-center text-sm font-bold md:text-base`}
         >
           {articles.tags?.map((item) => (
-            <span key={item.tag} className="mr-2 inline-block">
+            <span key={item.tag} className="mx-1 inline-block">
               #{item.tag}
             </span>
           ))}

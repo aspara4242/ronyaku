@@ -5,6 +5,7 @@ import Contents from "@/components/Contents";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { metadata as defaultMetadata } from "@/app/layout";
 
 export async function generateMetadata({
   params,
@@ -25,10 +26,12 @@ export async function generateMetadata({
       canonical: "/articles/" + id,
     },
     openGraph: {
+      ...defaultMetadata.openGraph,
       title: title,
       description: description,
       url: `https://ronyaku.com/works/${id}`,
       images: images,
+      type: "article",
     },
     twitter: {
       card: "summary_large_image",

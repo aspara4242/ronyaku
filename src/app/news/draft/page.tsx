@@ -2,6 +2,7 @@ import { getNewsDraft } from "@libs/news";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
+import { metadata as defaultMetadata } from "@/app/layout";
 
 export async function generateMetadata({
   searchParams,
@@ -22,6 +23,7 @@ export async function generateMetadata({
       canonical: "/news/" + id,
     },
     openGraph: {
+      ...defaultMetadata.openGraph,
       title: title,
       description: description,
       url: `https://ronyaku.com/news/${id}`,

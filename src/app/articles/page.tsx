@@ -6,6 +6,7 @@ import Title from "@/components/Title";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { Metadata } from "next";
+import { metadata as defaultMetadata } from "@/app/layout";
 
 const title = "Articles";
 const description = "老若男女未来学園が公開した記事の一覧です。";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     canonical: "/" + slug,
   },
   openGraph: {
+    ...defaultMetadata.openGraph,
     title: title,
     description: description,
     url: `https://ronyaku.com/${slug}`,

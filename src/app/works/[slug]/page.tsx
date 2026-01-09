@@ -3,6 +3,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contents from "@/components/Contents";
 import Link from "next/link";
+import { metadata as defaultMetadata } from "@/app/layout";
+
 export async function generateMetadata({
   params,
 }: {
@@ -23,6 +25,7 @@ export async function generateMetadata({
       canonical: "/works/" + slug,
     },
     openGraph: {
+      ...defaultMetadata.openGraph,
       title: title,
       description: description,
       url: `https://ronyaku.com/works/${slug}`,
@@ -63,7 +66,7 @@ export default async function StaticDetailPage({
           dangerouslySetInnerHTML={{
             __html: `${works.body}`,
           }}
-          className="works-content prose prose-sm mb-8 border-b pb-8 md:prose-base"
+          className="works-content prose prose-sm md:prose-base mb-8 border-b pb-8"
         />
         <p className="w-full text-center text-sm underline md:text-base">
           <Link href="/works">一覧に戻る</Link>

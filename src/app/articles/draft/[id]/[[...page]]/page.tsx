@@ -8,13 +8,13 @@ import Link from "next/link";
 
 export async function generateMetadata({
   params,
-  searchParams
+  searchParams,
 }: {
-  params: Promise<{ id: string; page?: string[] }>,
+  params: Promise<{ id: string; page?: string[] }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { id, page } = await params;
-  const {key} = await searchParams;
+  const { id } = await params;
+  const { key } = await searchParams;
   const articles = await getArticlesDraft(id, key as string);
 
   const title = "【下書き】" + articles.title;
@@ -44,13 +44,13 @@ export async function generateMetadata({
 
 export default async function StaticDetailPage({
   params,
-  searchParams
+  searchParams,
 }: {
-  params: Promise<{ id: string; page?: string[] }>,
+  params: Promise<{ id: string; page?: string[] }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { id, page } = await params;
-  const {key} = await searchParams;
+  const { key } = await searchParams;
   const articles = await getArticlesDraft(id, key as string);
 
   console.log("===== " + id + ", " + key + " =====");

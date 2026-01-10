@@ -94,15 +94,15 @@ export default async function StaticDetailPage({
       <h2 className="mb-4 text-center text-xl font-bold md:text-2xl">
         {articles.title}
       </h2>
-      <p
-        className={`${currentPage === 1 ? "mb-8" : "mb-16"} text-center text-sm font-bold md:text-base`}
+      <ul
+        className={`${currentPage === 1 ? "mb-8" : "mb-16"} flex flex-wrap items-center justify-center gap-x-2 gap-y-2`}
       >
         {articles.tags?.map((item) => (
-          <span key={item.tag} className="mr-2 inline-block">
+          <li key={item.tag} className="text-sm font-bold md:text-base">
             #{item.tag}
-          </span>
+          </li>
         ))}
-      </p>
+      </ul>
       {currentPage === 1 && (
         <Image
           src={articles.thumbnail.url}
@@ -116,10 +116,10 @@ export default async function StaticDetailPage({
         dangerouslySetInnerHTML={{
           __html: `${currentPageData.body}`,
         }}
-        className="articles-content prose prose-sm md:prose-base mb-16"
+        className="articles-content prose prose-sm md:prose-base"
       />
       {totalPages >= 2 && (
-        <div>
+        <div className="mt-16">
           <p className="mb-16 text-center text-sm underline md:text-base">
             <Link
               href={`/articles/${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}?key=${key}`}

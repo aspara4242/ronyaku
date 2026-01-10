@@ -8,15 +8,13 @@
   --color-gray: #98989a;
   --color-light-gray: #b7b7b8;
 
-  --color-blue: #47A3FF;
+  --color-blue: #47a3ff;
   --color-green: #47d76b;
   --color-yellow: #ffe45c;
-  --color-red: #FF7570;
+  --color-red: #ff7570;
   --color-purple: #a98de2;
   --color-orange: #ffb370;
-  --color-pink: #FF99AA;
-
-  --height-trim: calc((1em - 1lh) / 2);
+  --color-pink: #ff99aa;
 }
 
 body {
@@ -30,20 +28,9 @@ h2,
 h3,
 h4,
 h5,
-.height-trim {
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    inline-size: 0;
-    block-size: 1px;
-  }
-  &::before {
-    margin-block-end: var(--height-trim);
-  }
-  &::after {
-    margin-block-start: var(--height-trim);
-  }
+li,
+.trim-text-both {
+  text-box-trim: trim-both;
 }
 
 .news-content,
@@ -66,10 +53,10 @@ h5,
     @apply underline;
   }
   h3 {
-    @apply mb-4 text-base font-bold md:text-lg;
+    @apply mb-4 text-justify text-base font-bold md:text-lg;
   }
   h4 {
-    @apply mb-4 text-sm font-bold md:text-base;
+    @apply mb-4 text-justify text-sm font-bold md:text-base;
   }
   figure {
     @apply mx-auto mb-8 w-full max-w-135;
@@ -113,9 +100,6 @@ h5,
 .articles-content {
   h3 {
     @apply before:content-['-_'];
-    &::before {
-      display: inline;
-    }
   }
   blockquote {
     @apply mb-8 border p-4 font-normal not-italic;
@@ -137,10 +121,7 @@ h5,
     @apply rounded-md bg-bg-gray;
   }
   h3 {
-    @apply mt-16 mb-8 border-b-2 pb-2 leading-none before:content-['◆'];
-    &::before {
-      display: inline;
-    }
+    @apply mt-16 mb-8 border-b-2 pb-2 before:content-['◆'];
   }
   .interviewer {
     @apply text-light-gray before:content-['──_'];

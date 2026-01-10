@@ -13,7 +13,7 @@ export default function Footer() {
           <Logo className="mx-auto mb-8 h-9" />
         </Link>
 
-        <div className="height-trim text-center text-base leading-8">
+        <div className="trim-text-both text-center text-base leading-8">
           <Link href="/about">About Us</Link>
           {" / "}
           <Link href="/works">Works</Link>

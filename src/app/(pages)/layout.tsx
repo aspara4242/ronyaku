@@ -8,9 +8,9 @@ type RootLayoutProps = {
 
 const RootLayout: FC<RootLayoutProps> = (props) => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navigation />
-      <main className="mx-auto mt-12 mb-32 w-[90%] max-w-180 md:mt-28">
+      <main className="mx-auto mt-12 mb-32 w-[90%] max-w-180 grow md:mt-28">
         {props.children}
       </main>
       <Footer />

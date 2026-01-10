@@ -2,7 +2,6 @@ import { client } from "./client";
 
 export type Articles = {
   id: string;
-  slug: string;
   title: string;
   category: string;
   tags: {

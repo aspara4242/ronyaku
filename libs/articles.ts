@@ -2,13 +2,12 @@ import { client } from "./client";
 
 export type Articles = {
   id: string;
-  slug: string;
   title: string;
   category: string;
   tags: {
     tag: string;
   }[];
-  publishedAt: string;
+  publication_date: string;
   thumbnail: {
     url: string;
     alt: string;
@@ -25,9 +24,9 @@ export async function getArticlesList(): Promise<Articles[]> {
   const data = await client.get({
     endpoint: "articles",
     queries: {
-      fields: "id,slug,title,category,tags,publishedAt,thumbnail",
+      fields: "id,title,category,tags,publication_date,thumbnail",
       limit: 100,
-      orders: "-publishedAt,system:default",
+      orders: "-publication_date,system:default",
     },
   });
   return data.contents;

@@ -74,7 +74,7 @@ export default async function StaticDetailPage({
           {articles.category}
         </p>
         <p className="mr-0.5 text-sm md:text-base">
-          {new Date(articles.publishedAt)
+          {new Date(articles.publication_date)
             .toLocaleDateString("ja-JP", {
               timeZone: "Asia/Tokyo",
               year: "numeric",

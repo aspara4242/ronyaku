@@ -23,7 +23,7 @@ const Accordion = ({ name, skills, children }: AccordionProps) => {
         className="flex cursor-pointer justify-between pb-2"
       >
         <div className="pr-2">
-          <p className="mb-2 text-justify text-base md:text-lg">{name}</p>
+          <h2 className="mb-2 text-justify text-base md:text-lg">{name}</h2>
           <p className="text-xs md:text-sm">{skills}</p>
         </div>
         <Plus className="mr-1 w-4 md:mr-2 md:w-5" isOpen={isOpen} />

@@ -46,7 +46,7 @@ const Articles = ({
       <ul
         className={`${currentPage === 1 ? "mb-8" : "mb-16"} flex flex-wrap items-center justify-center gap-x-2 gap-y-2`}
       >
-        {articles.tags?.map((item: any) => (
+        {articles.tags?.map((item: { tag: string }) => (
           <li key={item.tag} className="text-sm font-bold md:text-base">
             #{item.tag}
           </li>

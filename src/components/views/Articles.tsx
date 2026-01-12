@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Articles as articles } from "@libs/articles";
+
 const Articles = ({
   articles,
   currentPage,
 }: {
-  articles: any;
+  articles: articles;
   currentPage: number;
 }) => {
   const totalPages = articles.bodies?.length;
@@ -77,7 +79,7 @@ const Articles = ({
             </Link>
           </p>
           <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-8">
-            {pages.map((num) => (
+            {pages.map((num: number) => (
               <li key={num}>
                 <Link
                   href={`/articles/${articles.id}${num === 1 ? "" : "/" + num}`}

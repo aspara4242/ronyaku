@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { RonyakuLogo } from "./RonyakuLogo";
+import { RonyakuLogo } from "./svg/RonyakuLogo";
 
 interface Props {
   baseSpeed?: number;

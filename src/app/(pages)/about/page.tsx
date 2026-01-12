@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Title from "@/components/Title";
-import TextBlock from "@/components/TextBlock";
+import Title from "@/components/common/Title";
+import TextBlock from "@/components/common/TextBlock";
 import { Metadata } from "next";
 import { metadata as defaultMetadata } from "@/app/layout";
 

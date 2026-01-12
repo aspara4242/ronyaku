@@ -1,5 +1,5 @@
 import { getNewsList } from "@libs/news";
-import Title from "@/components/Title";
+import Title from "@/components/common/Title";
 import { Metadata } from "next";
 import NewsList from "@/components/NewsList";
 import { metadata as defaultMetadata } from "@/app/layout";

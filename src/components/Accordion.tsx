@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus } from "./Icons";
+import { Plus } from "./svg/Icons";
 
 interface AccordionProps {
   name: string;

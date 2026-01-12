@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getWorksList } from "@libs/works";
-import Title from "@/components/Title";
+import Title from "@/components/common/Title";
 import { Metadata } from "next";
 import { metadata as defaultMetadata } from "@/app/layout";
 

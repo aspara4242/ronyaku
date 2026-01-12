@@ -1,10 +1,9 @@
 export const dynamic = "force-dynamic";
 
-import { getMembersList } from "@libs/members";
-import Title from "@/components/Title";
+import { getMembersList, Members } from "@libs/members";
+import Title from "@/components/common/Title";
+import TextBlockSm from "@/components/common/TextBlockSm";
 import Accordion from "@/components/Accordion";
-import TextBlockSm from "@/components/TextBlockSm";
-import { Members } from "@libs/members";
 import { Metadata } from "next";
 import { metadata as defaultMetadata } from "@/app/layout";
 

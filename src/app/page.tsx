@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { getNewsListForTop } from "@libs/news";
-import Spinner from "@/components/Spinner";
-import Copyright from "@/components/Copyright";
-import ContactLinks from "@/components/ContactLinks";
+import ContactLinks from "@/components/common/ContactLinks";
+import Copyright from "@/components/common/Copyright";
 import NewsList from "@/components/NewsList";
+import Spinner from "@/components/Spinner";
 
 export default async function Home() {
   const contents = await getNewsListForTop();

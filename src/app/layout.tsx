@@ -1,7 +1,8 @@
-import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { type FC } from "react";
-import { Analytics } from "@vercel/analytics/react";
+
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ronyaku.com"),

@@ -23,6 +23,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/typography": "^0.5.19",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -37,11 +38,27 @@
   },
   "prettier": {
     "plugins": [
+      "@trivago/prettier-plugin-sort-imports",
       "prettier-plugin-tailwindcss"
     ],
     "tailwindConfig": "./src/styles/globals.css",
     "tailwindAttributes": [
       "className"
-    ]
+    ],
+    "importOrder": [
+      "^next/(.*)$",
+      "^react/(.*)$",
+      "<THIRD_PARTY_MODULES>",
+      "^@libs/(.*)$",
+      "^@/(.*)$",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+  },
+  "overrides": {
+    "eslint-plugin-tailwindcss": {
+      "tailwindcss": "$tailwindcss"
+    }
   }
 }

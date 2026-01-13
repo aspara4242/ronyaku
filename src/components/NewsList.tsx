@@ -1,6 +1,7 @@
 // components/NewsList.tsx
-import React from "react";
 import Link from "next/link";
+
+import React from "react";
 
 type News = {
   id: string;
@@ -36,7 +37,7 @@ const NewsList = ({ contents }: NewsListProps) => {
                   .replace(/\//g, "-")}
               </p>
             </div>
-            <p className="mb-2 text-justify text-sm md:text-base">
+            <p className="mb-2 text-sm leading-normal md:text-base">
               {news.title}
             </p>
           </Link>

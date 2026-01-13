@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { getWorksList } from "@libs/works";
-import Title from "@/components/common/Title";
+
 import { Metadata } from "next";
+
+import { getWorksList } from "@libs/works";
+
 import { metadata as defaultMetadata } from "@/app/layout";
+import Title from "@/components/common/Title";
 
 const title = "Works";
 const description = "老若男女未来学園のこれまでの活動についての情報です。";
@@ -33,11 +36,9 @@ export default async function StaticPage() {
         {contents.map((works) => (
           <div key={works.id} className="mb-4 border-b">
             <Link href={`/works/${works.slug}`}>
-              <p className="mb-2 text-justify text-base md:text-lg">
-                {works.title}
-              </p>
+              <p className="mb-2 text-base md:text-lg">{works.title}</p>
 
-              <p className="mb-2 text-justify text-xs md:text-sm">
+              <p className="mb-2 text-xs md:text-sm">
                 {new Date(works.date).getFullYear()}
                 {works.subtitle && " / " + works.subtitle}
               </p>

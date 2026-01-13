@@ -14,7 +14,7 @@ const TextBlock = ({ title, children, level = "h2" }: TextBlockProps) => {
     <div className="mb-8">
       <Tag className="mb-4 text-base font-bold md:text-lg">{title}</Tag>
 
-      <div className="trim-text-both text-justify text-sm leading-[1.75] md:text-base md:leading-[1.75]">
+      <div className="trim-text-both text-sm leading-[1.75] md:text-base md:leading-[1.75]">
         {children}
       </div>
     </div>

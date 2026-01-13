@@ -36,9 +36,11 @@ export default async function StaticPage() {
         {contents.map((works) => (
           <div key={works.id} className="mb-4 border-b">
             <Link href={`/works/${works.slug}`}>
-              <p className="mb-2 text-base md:text-lg">{works.title}</p>
+              <p className="mb-2 text-justify text-base md:text-lg">
+                {works.title}
+              </p>
 
-              <p className="mb-2 text-xs md:text-sm">
+              <p className="mb-2 text-justify text-xs md:text-sm">
                 {new Date(works.date).getFullYear()}
                 {works.subtitle && " / " + works.subtitle}
               </p>

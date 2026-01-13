@@ -31,7 +31,6 @@ h5,
 li,
 .trim-text-both {
   text-box-trim: trim-both;
-  @apply leading-[1.75];
 }
 
 .news-content,
@@ -47,30 +46,37 @@ li,
   > *:last-child {
     @apply mb-0;
   }
+  p,
+  h4,
+  li,
+  figcaption {
+    @apply text-sm md:text-base;
+  }
+  h3,
+  h4 {
+    @apply mb-4 leading-[1.75] font-bold;
+  }
   p {
-    @apply mb-8 text-sm md:text-base;
+    @apply mb-8 leading-[1.75];
+  }
+  h3 {
+    @apply text-base md:text-lg;
   }
   a {
     @apply underline;
-  }
-  h3 {
-    @apply mb-4 text-base font-bold md:text-lg;
-  }
-  h4 {
-    @apply mb-4 text-sm font-bold md:text-base;
   }
   figure {
     @apply mx-auto mb-8 w-full max-w-135;
   }
   figcaption {
-    @apply mt-2 text-sm text-light-gray opacity-75 md:text-base;
+    @apply mt-2 text-light-gray;
   }
   hr {
     @apply my-8;
   }
   ul,
   ol {
-    @apply mb-8 list-outside ps-4 pl-0 text-sm md:text-base;
+    @apply mb-8 list-outside ps-4 pl-0;
   }
   ul li,
   ol li {

@@ -1,9 +1,12 @@
-import Link from "next/link";
-import { getArticlesList } from "@libs/articles";
-import Title from "@/components/common/Title";
 import Image from "next/image";
+import Link from "next/link";
+
 import { Metadata } from "next";
+
+import { getArticlesList } from "@libs/articles";
+
 import { metadata as defaultMetadata } from "@/app/layout";
+import Title from "@/components/common/Title";
 
 const title = "Articles";
 const description = "老若男女未来学園が公開した記事の一覧です。";
@@ -56,7 +59,7 @@ export default async function StaticPage() {
                     .replace(/\//g, "-")}
                 </p>
               </div>
-              <p className="mb-2 text-base font-bold md:text-lg">
+              <p className="mb-2 text-justify text-base font-bold md:text-lg">
                 {articles.title}
               </p>
               <ul className="mb-4 text-xs font-bold md:text-sm">

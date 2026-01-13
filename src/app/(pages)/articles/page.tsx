@@ -56,16 +56,16 @@ export default async function StaticPage() {
                     .replace(/\//g, "-")}
                 </p>
               </div>
-              <p className="mb-2 text-justify text-base font-bold md:text-lg">
+              <p className="mb-2 text-base font-bold md:text-lg">
                 {articles.title}
               </p>
-              <p className="mb-4 text-xs font-bold md:text-sm">
+              <ul className="mb-4 text-xs font-bold md:text-sm">
                 {articles.tags?.map((item) => (
-                  <span key={item.tag} className="mr-2 inline-block">
+                  <li key={item.tag} className="mr-2 inline-block">
                     #{item.tag}
-                  </span>
+                  </li>
                 ))}
-              </p>
+              </ul>
             </Link>
           </div>
         ))}

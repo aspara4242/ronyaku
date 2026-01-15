@@ -2,7 +2,6 @@ import { client } from "./client";
 
 export type Works = {
   id: string;
-  slug: string;
   title: string;
   subtitle: string;
   body: string;

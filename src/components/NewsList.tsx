@@ -21,7 +21,7 @@ const NewsList = ({ contents }: NewsListProps) => {
     <div className="mx-auto w-full">
       {contents.map((news: News) => (
         <div key={news.id} className="mb-4 border-b">
-          <Link href={`/news/${news.slug}`}>
+          <Link href={`/news/${news.id}`}>
             <div className="mb-2 flex items-center">
               <p className="mr-2 flex w-16 items-center justify-center border text-xs md:w-20 md:text-sm">
                 {news.category}

@@ -2,7 +2,6 @@ import { client } from "./client";
 
 export type News = {
   id: string;
-  slug: string;
   title: string;
   body: string;
   publication_date: string;

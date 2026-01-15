@@ -2,7 +2,6 @@ import { client } from './client';
 
 export type Members = {
     id: string;
-    mem_id: string,
     name: string;
     rubi: string;
     skill: string[];

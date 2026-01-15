@@ -24,15 +24,12 @@ export async function getWorksList(): Promise<Works[]> {
   return data.contents;
 }
 
-export async function getWorksDetail(slug: string): Promise<Works> {
-  const data = await client.getList<Works>({
+export async function getWorksDetail(id: string): Promise<Works> {
+  const data = await client.getListDetail<Works>({
     endpoint: "works",
-    queries: {
-      filters: `slug[equals]${slug}`,
-      limit: 1,
-    },
+    contentId: id,
   });
-  return data.contents[0];
+  return data;
 }
 
 export async function getWorksDraft(id: string, key: string): Promise<Works> {

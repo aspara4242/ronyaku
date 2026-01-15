@@ -42,9 +42,9 @@ const Articles = ({
             .replace(/\//g, "-")}
         </p>
       </div>
-      <h2 className="mb-4 text-center text-xl font-bold md:text-2xl">
+      <h1 className="mb-4 text-center text-xl font-bold md:text-2xl">
         {articles.title}
-      </h2>
+      </h1>
       <ul
         className={`${currentPage === 1 ? "mb-8" : "mb-16"} flex flex-wrap items-center justify-center gap-x-2 gap-y-2`}
       >
@@ -67,7 +67,7 @@ const Articles = ({
         dangerouslySetInnerHTML={{
           __html: `${currentPageData.body}`,
         }}
-        className="articles-content prose prose-sm md:prose-base"
+        className="articles-content"
       />
       {totalPages >= 2 && (
         <div>

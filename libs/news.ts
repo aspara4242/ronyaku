@@ -43,15 +43,12 @@ export async function getNewsList(): Promise<News[]> {
   return data.contents;
 }
 
-export async function getNewsDetail(slug: string): Promise<News> {
-  const data = await client.getList<News>({
+export async function getNewsDetail(id: string): Promise<News> {
+  const data = await client.getListDetail<News>({
     endpoint: "news",
-    queries: {
-      filters: `slug[equals]${slug}`,
-      limit: 1,
-    },
+    contentId: id,
   });
-  return data.contents[0];
+  return data;
 }
 
 export async function getNewsDraft(id: string, key: string): Promise<News> {

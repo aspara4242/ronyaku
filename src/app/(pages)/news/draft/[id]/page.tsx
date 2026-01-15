@@ -1,12 +1,17 @@
 import { getNewsDraft } from "@libs/news";
+
 import { metadata as defaultMetadata } from "@/app/layout";
+import News from "@/components/views/News";
 
 export async function generateMetadata({
+  params,
   searchParams,
 }: {
+  params: Promise<{ id: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { id, key } = await searchParams;
+  const { id } = await params;
+  const { key } = await searchParams;
   const news = await getNewsDraft(id as string, key as string);
 
   const title = "【下書き】News";
@@ -31,42 +36,15 @@ export async function generateMetadata({
 }
 
 export default async function StaticDetailPage({
+  params,
   searchParams,
 }: {
+  params: Promise<{ id: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { id, key } = await searchParams;
+  const { id } = await params;
+  const { key } = await searchParams;
   const news = await getNewsDraft(id as string, key as string);
 
-  return (
-    <div>
-      <div className="mb-6 flex items-center justify-end">
-        <p className="mr-2 text-sm md:text-base">
-          {new Date(news.publication_date)
-            .toLocaleDateString("ja-JP", {
-              timeZone: "Asia/Tokyo",
-              year: "numeric",
-              month: "numeric",
-              day: "numeric",
-            })
-            .replace(/\//g, "-")}
-        </p>
-
-        <p className="flex w-16 items-center justify-center border text-xs md:w-20 md:text-sm">
-          {news.category}
-        </p>
-      </div>
-
-      <h2 className="mb-6 text-center text-base font-bold md:text-lg">
-        {news.title}
-      </h2>
-
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${news.body}`,
-        }}
-        className="news-content prose prose-sm md:prose-base border-2 px-4 py-8"
-      />
-    </div>
-  );
+  return <News news={news} />;
 }

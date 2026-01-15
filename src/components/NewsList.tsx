@@ -5,7 +5,6 @@ import React from "react";
 
 type News = {
   id: string;
-  slug: string;
   title: string;
   body: string;
   publication_date: string;

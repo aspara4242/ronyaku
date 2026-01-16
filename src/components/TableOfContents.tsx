@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { TocItem } from "@libs/extractToc";
 
@@ -10,8 +10,13 @@ import { Triangle } from "@/components/svg/Icons";
 
 export const TableOfContents = ({ items }: { items: TocItem[] }) => {
   if (items.length === 0) return null;
-  const defaultOpen = items.length <= 8;
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (items.length <= 8) {
+      setIsOpen(true);
+    }
+  });
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);

@@ -42,7 +42,7 @@ export const TableOfContents = ({ items }: { items: TocItem[] }) => {
           {items.map((item, index) => (
             <li
               key={index}
-              className={`${item.name === "h3" ? "pl-4 md:pl-5" : item.name === "h4" ? "pl-8 md:pl-10" : ""} border-b border-gray py-2 text-sm first:mt-2 md:text-base`}
+              className={`${item.name === "h3" ? "ml-4 md:ml-5" : item.name === "h4" ? "ml-8 md:ml-10" : ""} border-b border-gray py-2 text-sm first:mt-2 md:text-base`}
             >
               <Link href={item.url} className="">
                 {item.text}

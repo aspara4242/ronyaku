@@ -10,7 +10,8 @@ import { Triangle } from "@/components/svg/Icons";
 
 export const TableOfContents = ({ items }: { items: TocItem[] }) => {
   if (items.length === 0) return null;
-  const [isOpen, setIsOpen] = useState(items.length <= 8);
+  const defaultOpen = items.length <= 8;
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);

@@ -119,11 +119,7 @@ export interface PlusProps extends React.SVGProps<SVGSVGElement> {
   isOpen?: boolean | string;
 }
 
-export const Plus = ({
-  isOpen = false,
-  className,
-  ...props
-}: PlusProps) => (
+export const Plus = ({ isOpen = false, className, ...props }: PlusProps) => (
   <svg
     viewBox="4 4 8 8"
     fill="currentColor"
@@ -137,5 +133,26 @@ export const Plus = ({
     {...props}
   >
     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+  </svg>
+);
+
+export const Triangle = ({
+  isOpen = false,
+  className,
+  ...props
+}: PlusProps) => (
+  <svg
+    viewBox="0 0 24 12"
+    fill="currentColor"
+    className={className}
+    style={{
+      transform: isOpen ? "rotate(0deg)" : "rotate(-90deg)",
+      transition: "transform 0.3s linear",
+      transformOrigin: "center",
+    }}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M12,12l-12,-12l24,0l-12,12Z" />
   </svg>
 );

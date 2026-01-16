@@ -1,11 +1,11 @@
-// components/ContactLinks.tsx
 import React from "react";
-import { XIcon, InstagramIcon, YoutubeIcon, MailIcon } from "../svg/Icons";
+
+import { InstagramIcon, MailIcon, XIcon, YoutubeIcon } from "../svg/Icons";
 
 const ContactLinks = () => {
   return (
-    <div className="mb-12">
-      <div className="mx-auto mb-6 grid w-fit grid-cols-3 items-center justify-center gap-6">
+    <div className="mb-16">
+      <div className="mx-auto mb-7 grid w-fit grid-cols-3 items-center justify-center gap-6">
         <div className="flex justify-start">
           <a
             href="https://x.com/ronyaku4444"

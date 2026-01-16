@@ -2,11 +2,11 @@
 
 @theme {
   --color-bg-black: #141415;
-  --color-bg-gray: #1e1e1f;
+  --color-bg-gray: #28282a;
   --color-body-white: #e0e0e1;
 
   --color-gray: #98989a;
-  --color-light-gray: #b7b7b8;
+  --color-light-gray: #adadae;
 
   --color-blue: #47a3ff;
   --color-green: #47d76b;
@@ -61,7 +61,7 @@ li,
   h2,
   h3,
   h4 {
-    @apply font-bold;
+    @apply scroll-mt-16 font-bold;
   }
   p {
     @apply mb-8;

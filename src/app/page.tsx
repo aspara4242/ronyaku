@@ -1,9 +1,11 @@
 import Link from "next/link";
+
 import { getNewsListForTop } from "@libs/news";
-import ContactLinks from "@/components/common/ContactLinks";
-import Copyright from "@/components/common/Copyright";
+
 import NewsList from "@/components/NewsList";
 import Spinner from "@/components/Spinner";
+import ContactLinks from "@/components/common/ContactLinks";
+import Copyright from "@/components/common/Copyright";
 
 export default async function Home() {
   const contents = await getNewsListForTop();
@@ -11,7 +13,7 @@ export default async function Home() {
   return (
     <div className="relative mx-auto w-[90%] max-w-180">
       <main>
-        <div className="mt-6 mb-12 flex justify-center">
+        <div className="my-12 flex justify-center">
           <Spinner className="w-3/4 max-w-90" />
         </div>
 
@@ -29,7 +31,7 @@ export default async function Home() {
         </div>
       </main>
 
-      <div className="mb-36">
+      <div className="mb-32">
         <p className="mb-4 text-left text-lg">
           <Link href="/news">News</Link>
         </p>

@@ -1,9 +1,10 @@
-// components/Footer.tsx
-import React from "react";
 import Link from "next/link";
-import Copyright from "./Copyright";
-import ContactLinks from "./ContactLinks";
+
+import React from "react";
+
 import { Logo } from "../svg/Icons";
+import ContactLinks from "./ContactLinks";
+import Copyright from "./Copyright";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           <Logo className="mx-auto mb-8 h-9" />
         </Link>
 
-        <div className="trim-text-both text-center text-base leading-8">
+        <div className="trim-text-both text-center text-base leading-loose">
           <Link href="/about">About Us</Link>
           {" / "}
           <Link href="/works">Works</Link>

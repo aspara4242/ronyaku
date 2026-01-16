@@ -13,8 +13,9 @@ export async function generateMetadata({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { id } = await params;
-  const { key } = await searchParams;
-  const articles = await getArticlesDraft(id, key as string);
+  const { key: rawKey } = await searchParams;
+  const key = Array.isArray(rawKey) ? rawKey[0] : (rawKey ?? "");
+  const articles = await getArticlesDraft(id, key);
 
   const title = "【下書き】" + articles.title;
   const description = "老若男女未来学園の記事『" + articles.title + "』です。";
@@ -52,15 +53,23 @@ export default async function StaticDetailPage({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { id, page } = await params;
-  const { key } = await searchParams;
+  const { key: rawKey } = await searchParams;
+  const key = Array.isArray(rawKey) ? rawKey[0] : (rawKey ?? "");
 
   if (page && page[0] === "1") {
     redirect(`/articles/draft/${id}?key=${key}`);
   }
 
-  const articles = await getArticlesDraft(id, key as string);
+  const articles = await getArticlesDraft(id, key);
 
   const currentPage = page && page[0] ? parseInt(page[0], 10) : 1;
 
-  return <Articles articles={articles} currentPage={currentPage} />;
+  return (
+    <Articles
+      articles={articles}
+      currentPage={currentPage}
+      isDraft={true}
+      draftKey={key}
+    />
+  );
 }

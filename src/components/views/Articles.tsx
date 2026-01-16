@@ -2,13 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Articles as articles } from "@libs/articles";
+import { extractToc } from "@libs/extractToc";
+
+import TableOfContents from "../TableOfContents";
 
 const Articles = ({
   articles,
   currentPage,
+  isDraft,
+  draftKey,
 }: {
   articles: articles;
   currentPage: number;
+  isDraft?: boolean;
+  draftKey?: string;
 }) => {
   const totalPages = articles.bodies?.length;
   const pageIndex = currentPage - 1;
@@ -17,6 +24,20 @@ const Articles = ({
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   const currentPageData = articles.bodies?.[pageIndex];
+
+  const tocRegex = /<p>\s*\[\[toc\]\]\s*<\/p>/gi;
+  const parts = currentPageData.body.split(tocRegex);
+
+  let toc: ReturnType<typeof extractToc> | null = null;
+
+  if (articles.use_toc && parts.length > 1) {
+    toc = extractToc(
+      articles.bodies,
+      "/articles/" + (isDraft ? "draft/" : "") + articles.id,
+      draftKey
+    );
+    console.log(toc);
+  }
 
   return (
     <div>
@@ -63,17 +84,34 @@ const Articles = ({
           height={articles.thumbnail.height}
         />
       )}
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${currentPageData.body}`,
-        }}
-        className="articles-content"
-      />
+      {toc !== null ? (
+        <div>
+          <div
+            dangerouslySetInnerHTML={{ __html: parts[0] }}
+            className="articles-content mb-8"
+          />
+
+          <TableOfContents items={toc} />
+
+          <div
+            dangerouslySetInnerHTML={{ __html: parts[1] }}
+            className="articles-content"
+          />
+        </div>
+      ) : (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${currentPageData.body}`,
+          }}
+          className="articles-content"
+        />
+      )}
+
       {totalPages >= 2 && (
         <div>
           <p className="mt-16 mb-16 text-center text-sm underline md:text-base">
             <Link
-              href={`/articles/${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}`}
+              href={`/articles/${isDraft ? "draft/" : ""}${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}${draftKey && "?key=" + draftKey}`}
             >
               {isLastPage ? "最初のページへ" : "次のページへ"}
             </Link>
@@ -82,7 +120,7 @@ const Articles = ({
             {pages.map((num: number) => (
               <li key={num}>
                 <Link
-                  href={`/articles/${articles.id}${num === 1 ? "" : "/" + num}`}
+                  href={`/articles/${isDraft ? "draft/" : ""}${articles.id}${num === 1 ? "" : "/" + num}${draftKey && "?key=" + draftKey}`}
                   className={`flex h-10 w-8 items-center justify-center rounded-sm border font-bold ${num === currentPage ? "pointer-events-none text-gray" : "bg-bg-gray"}`}
                 >
                   {num}

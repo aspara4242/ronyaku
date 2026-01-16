@@ -15,6 +15,7 @@ export type Articles = {
     height: number;
   };
   custom_css: string;
+  use_toc: boolean;
   bodies: {
     body: string;
   }[];

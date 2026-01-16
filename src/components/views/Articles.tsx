@@ -111,7 +111,7 @@ const Articles = ({
         <div>
           <p className="mt-16 mb-16 text-center text-sm underline md:text-base">
             <Link
-              href={`/articles/${isDraft ? "draft/" : ""}${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}${draftKey && "?key=" + draftKey}`}
+              href={`/articles/${isDraft ? "draft/" : ""}${articles.id}${isLastPage ? "" : "/" + (currentPage + 1)}${isDraft ? "?key=" + draftKey : ""}`}
             >
               {isLastPage ? "最初のページへ" : "次のページへ"}
             </Link>
@@ -120,7 +120,7 @@ const Articles = ({
             {pages.map((num: number) => (
               <li key={num}>
                 <Link
-                  href={`/articles/${isDraft ? "draft/" : ""}${articles.id}${num === 1 ? "" : "/" + num}${draftKey && "?key=" + draftKey}`}
+                  href={`/articles/${isDraft ? "draft/" : ""}${articles.id}${num === 1 ? "" : "/" + num}${isDraft ? "?key=" + draftKey : ""}`}
                   className={`flex h-10 w-8 items-center justify-center rounded-sm border font-bold ${num === currentPage ? "pointer-events-none text-gray" : "bg-bg-gray"}`}
                 >
                   {num}

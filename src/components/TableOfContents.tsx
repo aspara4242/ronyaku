@@ -44,7 +44,7 @@ export const TableOfContents = ({ items }: { items: TocItem[] }) => {
               key={index}
               className={`${item.name === "h3" ? "ml-4 md:ml-5" : item.name === "h4" ? "ml-8 md:ml-10" : ""} border-b border-gray py-2 text-sm first:mt-2 md:text-base`}
             >
-              <Link href={item.url} className="inline-block w-full">
+              <Link href={item.url} className="block">
                 {item.text}
               </Link>
             </li>

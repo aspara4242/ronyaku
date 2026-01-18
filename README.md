@@ -91,9 +91,32 @@
 
 ## 📸 スクリーンショット
 
-> [!TIP]
-> ここにサイトのキャプチャ画像を貼ると、視覚的なインパクトが強まります。
-> `![メインビジュアル](./public/screenshot.png)` のように記述します。
+### 1. メインビジュアル
+団体のアイデンティティを際立たせるため、余白を最適化した設計。ロゴにはクリックするとランダムに回転するという遊び心も。
+
+![Main Visual Desktop](public/screenshots/main_desktop.png)
+
+---
+
+### 2. レスポンス対応
+Tailwind CSSを用い、画面サイズに応じてレイアウトを最適化。
+
+#### デスクトップ表示
+![Responsive Desktop](public/screenshots/responsive_desktop.png)
+
+#### モバイル表示
+![Responsive Mobile](public/screenshots/responsive_mobile.png)
+
+---
+
+### 3. コンテンツ体験の向上
+長文記事を快適に読み進めるための各種機能を実装。
+
+#### 動的な目次生成
+![Dynamic ToC](public/screenshots/dynamic_toc.png)
+
+#### マルチページ化（ページネーション）
+![Pagination](public/screenshots/pagination.png)
 
 ---
 
@@ -136,3 +159,9 @@ npm run dev
 ```
 
 起動後、 http://localhost:3000 にアクセスすることで、リアルタイムにコードの変更を確認しながら開発が可能となる。
+
+---
+
+## 📄 ライセンス
+
+本プロジェクトのソースコードは **MITライセンス** の下で公開されている。詳細は `LICENSE` ファイルを参照すること。

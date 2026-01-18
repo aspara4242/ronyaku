@@ -27,7 +27,7 @@ export const TableOfContents = ({ items }: { items: TocItem[] }) => {
     <nav className="mb-16 rounded-md bg-bg-gray">
       <div
         onClick={toggleAccordion}
-        className="p-4 flex cursor-pointer items-center justify-start"
+        className="flex cursor-pointer items-center justify-start p-4"
       >
         <Triangle className="mr-2 w-3" isOpen={isOpen} />
         <p className="text-sm font-bold md:text-base">目次</p>
@@ -38,7 +38,7 @@ export const TableOfContents = ({ items }: { items: TocItem[] }) => {
           gridTemplateRows: isOpen ? "1fr" : "0fr",
         }}
       >
-        <ul className="px-4 overflow-hidden text-light-gray">
+        <ul className="overflow-hidden px-4 text-light-gray">
           {items.map((item, index) => (
             <li
               key={index}

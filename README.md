@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 老若男女未来学園ホームページ (Ronyakunannyo Mirai Gakuen Official Website)
 
-## Getting Started
+演劇を中心とした幅広い芸術分野での活動を画策するクリエイティブ団体、老若男女未来学園のウェブサイトです。
 
-First, run the development server:
+**URL: [https://ronyaku.com](https://ronyaku.com)**
 
+---
+
+## 📌 コンセプト：編集的エンジニアリング
+単なる情報掲載サイトではなく、**「観劇体験をWebから始める」**をコンセプトに設計しています。
+- **ターゲット層への最適化**: 観劇層の8割以上がスマートフォン利用であることを踏まえ、完全モバイルファーストな設計。
+- **運用の持続性**: 専門知識のない劇団員でも、数分で公演情報の更新や残席状況の変更ができる仕組みを構築しました。
+
+## 🛠 使用技術
+### Frontend
+- **Framework**: Next.js (TypeScript)
+- **Styling**: Tailwind CSS, Headless UI
+- **Deployment**: Vercel
+
+### Backend / Infrastructure
+- **CMS**: microCMS (スキーマ設計、API連携)
+- **Monitoring**: Google Search Console, Lighthouse
+
+## ✨ こだわった実装ポイント
+| 機能 | 内容 | 導入のメリット |
+| :--- | :--- | :--- |
+| **ISR (Incremental Static Regeneration)** | 公演情報の即時更新と高速なページ表示を両立。 | 予約状況の変更を即座に反映可能に。 |
+| **microCMS API連携** | ニュース、過去公演、メンバー紹介を外部管理。 | コードを触らずに全情報の更新が可能。 |
+| **SEO & アクセシビリティ** | Semantic HTMLの徹底とメタタグの動的生成。 | 劇団名検索での上位表示、SNSシェア時の視認性向上。 |
+
+## 📸 スクリーンショット
+> [!TIP]
+> ここにサイトのキャプチャ画像を貼ると、視覚的なインパクトが強まります。
+> `![メインビジュアル](./public/screenshot.png)` のように記述します。
+
+## 🚀 開発環境のセットアップ
+
+### 1. リポジトリのクローン
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone [https://github.com/あなたのユーザー名/リポジトリ名.git](https://github.com/あなたのユーザー名/リポジトリ名.git)
+cd リポジトリ名

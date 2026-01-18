@@ -36,7 +36,6 @@ const Articles = ({
       "/articles/" + (isDraft ? "draft/" : "") + articles.id,
       draftKey
     );
-    console.log(toc);
   }
 
   return (

@@ -24,7 +24,7 @@ export const TableOfContents = ({ items }: { items: TocItem[] }) => {
   };
 
   return (
-    <nav className="mb-16 rounded-md bg-bg-gray">
+    <nav className="mb-24 rounded-md bg-bg-gray">
       <div
         onClick={toggleAccordion}
         className="flex cursor-pointer items-center justify-start p-4"

@@ -88,7 +88,7 @@ const Articles = ({
         <div>
           <div
             dangerouslySetInnerHTML={{ __html: parts[0] }}
-            className="articles-content mb-8"
+            className="articles-content mb-16"
           />
 
           <TableOfContents items={toc} />

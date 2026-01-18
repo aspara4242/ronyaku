@@ -125,7 +125,7 @@ li,
 
 .articles-content {
   h2 {
-    @apply mt-16 mb-8 scroll-mt-16 border-b-2 pb-2 text-base before:content-['◆'] md:text-lg;
+    @apply mt-24 mb-16 scroll-mt-16 border-b-2 pb-2 text-lg before:content-['◆'] md:text-xl;
   }
   h3 {
     @apply mt-16 mb-8 scroll-mt-16 text-base before:content-['-_'] md:text-lg;

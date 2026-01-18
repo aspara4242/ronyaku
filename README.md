@@ -105,7 +105,7 @@ Tailwind CSSを用い、画面サイズに応じてレイアウトを最適化�
 ![Responsive Desktop](public/screenshots/responsive_desktop.png)
 
 #### モバイル表示
-![Responsive Mobile](public/screenshots/responsive_mobile.png)
+<img src="public/screenshots/responsive_mobile.png" alt="Responsive Mobile" width="100%" max-width="390">
 
 ---
 

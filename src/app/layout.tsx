@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import { type FC } from "react";
 
@@ -44,6 +45,7 @@ const RootLayout: FC<RootLayoutProps> = (props) => {
       <body>
         {props.children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

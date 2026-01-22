@@ -22,6 +22,7 @@
 
 本プロジェクトでは、最新のNext.js App Routerを軸に、フロントエンドからコンテンツ管理・インフラまでを統合したモダンなスタックを採用している。
 
+
 ### 🏗️ Core & Logic
 | 技術名 | バージョン | 役割・選定理由 |
 | :--- | :--- | :--- |
@@ -102,9 +103,11 @@
 Tailwind CSSを用い、画面サイズに応じてレイアウトを最適化。
 
 #### デスクトップ表示
+コンテンツを中央寄せにし、空いたスペースに固定のグローバルナビゲーションを設置。
 ![Responsive Desktop](public/screenshots/responsive_desktop.png)
 
 #### モバイル表示
+領域が限られるため固定ナビゲーションは表示せず、リンクはフッターに集中させた。
 <img src="public/screenshots/responsive_mobile.png" alt="Responsive Mobile" width="390px"/>
 
 ---

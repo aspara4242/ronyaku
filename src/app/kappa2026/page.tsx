@@ -89,7 +89,7 @@ export default async function StaticPage() {
               <br />
               28日(土) 12:00・15:00・18:00
               <br />
-              29日(日) 12:00・15:00・18:00
+              29日(日) 13:00・16:00
             </p>
             <p className="text-sm leading-relaxed">
               ＊上演時間は60分程度を予定しています。

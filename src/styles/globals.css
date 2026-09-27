@@ -15,6 +15,9 @@
   --color-purple: #a98de2;
   --color-orange: #ffb370;
   --color-pink: #ff99aa;
+
+  --color-kappa-blue: #093786;
+  --color-kappa-yellow: #dbef14;
 }
 
 body {
@@ -166,4 +169,25 @@ li,
   .custom-pink {
     @apply text-pink;
   }
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* 移動開始直後にくっきり表示 */
+  }
+  40% {
+    opacity: 1; /* 右端に近づくまで表示維持 */
+  }
+  50% {
+    transform: translateX(200%);
+    opacity: 0; /* 右端に達するタイミングで透明にする */
+  }
+}
+
+.animate-slide-text {
+  animation: slideText 3s ease-in-out 3 1s;
 }

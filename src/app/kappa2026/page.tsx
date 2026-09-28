@@ -182,7 +182,7 @@ export default async function StaticPage() {
               LivePocket
             </Link>
             <p className="mb-8 text-sm leading-relaxed">
-              ＊ご購入にはLivepocketの会員登録が必要です。
+              ＊ご購入にはLivePocketの会員登録が必要です。
               <br />
               ＊クレジットカード決済またはコンビニ決済がご利用いただけます。
             </p>
